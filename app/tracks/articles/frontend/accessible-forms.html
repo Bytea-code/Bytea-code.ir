@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرم دسترس‌پذیر: برچسب، خطا و فوکوس — بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../../../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../../../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../../../assets/favicon/site.webmanifest">
+<meta name="description" content="سه چیزی که یک فرم را از «کارکننده» به «قابل استفاده برای همه» تبدیل می‌کند؛ با کد آماده و چک‌لیست کوتاه.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../assets/style/style.css">
+<link rel="stylesheet" href="../../../assets/style/tracks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../../../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../../../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../../../index.html#about">درباره</a>
+            <a href="../../../../index.html#tracks">مسیرها</a>
+            <a href="../../../../index.html#events">رویدادها</a>
+            <a href="../../../../index.html#mentors">منتورها</a>
+            <a href="../../../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../../../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../../../index.html#about">درباره</a>
+            <a href="../../../../index.html#tracks">مسیرها</a>
+            <a href="../../../../index.html#events">رویدادها</a>
+            <a href="../../../../index.html#mentors">منتورها</a>
+            <a href="../../../../index.html#faq">پرسش‌ها</a>
+            <a href="../../../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main style="--path:var(--path-frontend)">
+    <section class="article-hero">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../frontend.html">فرانت‌اند</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>مقاله</b></nav>
+            <span class="path-tag">فرانت‌اند</span>
+            <h1>فرم دسترس‌پذیر: برچسب، خطا و فوکوس</h1>
+            <div class="article-byline">
+                <span><span class="byline-avatar">س</span> سارا احمدی</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۲۸ مهر ۱۴۰۵</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۷ دقیقه مطالعه</span>
+            </div>
+        </div>
+    </section>
+    <div class="wrap">
+        <article class="prose"><p>فرم‌ها اولین جایی هستند که دسترس‌پذیری خودش را نشان می‌دهد: کاربری که با کیبورد کار می‌کند، کاربری که صفحه‌خوان دارد، و کاربری که روی موبایل با انگشت اشاره تایپ می‌کند. خبر خوب این است که با سه تصمیم ساده، بیشتر راه را رفته‌ای.</p>
+<h2>برچسب واقعی، نه placeholder</h2>
+<p>placeholder بعد از اولین تایپ ناپدید می‌شود و کنتراست پایینی دارد؛ هرگز جای label را نمی‌گیرد. label را با for به id ورودی وصل کن تا کلیک روی برچسب، فیلد را فعال کند و صفحه‌خوان نام فیلد را بخواند.</p>
+<pre class="code-block dark-scroll"><span class="tk-tag">&lt;label</span> <span class="tk-attr">for</span>=<span class="tk-str">&quot;email&quot;</span><span class="tk-tag">&gt;</span>ایمیل<span class="tk-tag">&lt;/label</span><span class="tk-tag">&gt;</span>
+<span class="tk-tag">&lt;input</span> <span class="tk-attr">id</span>=<span class="tk-str">&quot;email&quot;</span> <span class="tk-attr">type</span>=<span class="tk-str">&quot;email&quot;</span>
+       <span class="tk-attr">aria-describedby</span>=<span class="tk-str">&quot;email-error&quot;</span>
+       <span class="tk-attr">autocomplete</span>=<span class="tk-str">&quot;email&quot;</span><span class="tk-tag">&gt;</span></pre>
+<h2>خطا را اعلام کن، نه فقط رنگی</h2>
+<p>پیام خطا باید به فیلد مرتبط باشد (aria-describedby)، هنگام ظهور اعلام شود (role=&quot;alert&quot; یا aria-live) و فقط به رنگ قرمز متکی نباشد؛ متن خطا باید بگوید چه چیزی اشتباه است و چگونه درست می‌شود.</p>
+<ul><li>فوکوس را بعد از submit ناموفق روی اولین فیلد خطادار ببر.</li><li>حلقهٔ فوکوس (focus ring) را حذف نکن؛ فقط قشنگ‌ترش کن.</li><li>برای فیلدهای اجباری از required استفاده کن، نه فقط ستارهٔ تزئینی.</li></ul>
+<div class="tip-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.8.7-1 1.5-1 2.5h-6c0-1-.2-1.8-1-2.5A6 6 0 0 1 12 3z"/></svg><span><b>نکتهٔ منتور:</b> یک بار فرمت را فقط با کیبورد (Tab و Enter) پر کن؛ هر جا گیر کردی، یک باگ دسترس‌پذیری پیدا کرده‌ای.</span></div></article>
+        <nav class="article-nav" aria-label="مقاله‌های مسیر">
+            <a href="grid-vs-flexbox.html"><small>مقالهٔ قبلی</small><b>Grid یا Flexbox؛ کدام را کجا استفاده کنیم؟</b></a>
+            <a class="next" href="react-state.html"><small>مقالهٔ بعدی</small><b>وضعیت در React: کجا نگه داریم و کجا نه؟</b></a>
+        </nav>
+    </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../../../index.html" class="logo"><img class="logo-img" src="../../../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../../../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../../../tracks/backend.html">بک‌اند</a>
+                <a href="../../../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../../../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../../../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../../../index.html#about">دربارهٔ ما</a>
+                <a href="../../../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../../../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../../../assets/static/data-extra.js"></script>
+<script src="../../../assets/static/bytea.js"></script>
+</body>
+</html>

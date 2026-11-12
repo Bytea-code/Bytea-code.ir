@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ابزار و دواپس — مسیر یادگیری بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="description" content="کدت را به دست کاربر برسان؛ Git و کار تیمی، تست خودکار و کیفیت کد، و CI/CD با داکر. مسیری که فاصلهٔ «روی ماشین من کار می‌کند» تا production را پر می‌کند.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/tracks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-path="devops">
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="path-hero" data-no="۰۴" style="--path:var(--path-devops)">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../index.html#tracks">مسیرها</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>ابزار و دواپس</b></nav>
+            <div class="path-head">
+                <span class="eyebrow">devops path</span>
+                <h1>مسیر <span>ابزار و دواپس</span></h1>
+                <p class="path-lead">کدت را به دست کاربر برسان؛ Git و کار تیمی، تست خودکار و کیفیت کد، و CI/CD با داکر. مسیری که فاصلهٔ «روی ماشین من کار می‌کند» تا production را پر می‌کند.</p>
+                <div class="meta-chips">
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <i>۱۸</i> ساعت آموزش</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg> <i>۴</i> مقاله</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg> <i>۵</i> ویدیوی آپارات</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg> <i>۳</i> قالب آماده</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="roadmap" style="--path:var(--path-devops)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">learning roadmap</span>
+                    <h2>نقشهٔ راه این مسیر</h2>
+                    <p>به‌ترتیب شماره‌ها جلو برو؛ هر قدم به منبعِ همین مسیر وصل است. بعد از هر قدم، تسک هفتگی پنل را انجام بده.</p>
+                </div>
+            </div>
+            <ol class="roadmap-list">
+                <li class="roadmap-step" data-reveal data-delay="0">
+                    <span class="roadmap-no">۱</span>
+                    <div class="roadmap-body">
+                        <h3>Git و کار تیمی بدون ترس</h3>
+                        <p>برنچ کوچک، پیام کامیت درست، ری‌بیس و سه ابزار نجات؛ گردش کار روزانهٔ یک تیم.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/devops/git-team.html">مقالهٔ Git تیمی <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="videos.html#path=devops">ویدیوهای دواپس <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="60">
+                    <span class="roadmap-no">۳</span>
+                    <div class="roadmap-body">
+                        <h3>تست خودکار؛ هرم تست</h3>
+                        <p>واحد زیاد، یکپارچه متوسط، سرتاسر کم؛ اولین تست معنادار را روی تابعی بنویس که دیروز باگ داشت.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/devops/testing-pyramid.html">مقالهٔ هرم تست <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="120">
+                    <span class="roadmap-no">۴</span>
+                    <div class="roadmap-body">
+                        <h3>CI/CD با GitHub Actions</h3>
+                        <p>هر پوش لینت و تست شود و main خودکار مستقر؛ اصل شکست سریع را در خط لوله رعایت کن.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/devops/ci-cd.html">مقالهٔ CI/CD <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="180">
+                    <span class="roadmap-no">۵</span>
+                    <div class="roadmap-body">
+                        <h3>قالب‌های آمادهٔ خط لوله و داکر</h3>
+                        <p>ورک‌فلو CI و Dockerfile چندمرحله‌ای را بردار، بخوان و برای پروژهٔ خودت شخصی‌سازی کن.</p>
+                        <div class="roadmap-links">
+                            <a href="templates/devops/ci-workflow.html">قالب ورک‌فلو CI <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="templates/devops/dockerfile.html">قالب Dockerfile <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="240">
+                    <span class="roadmap-no">۶</span>
+                    <div class="roadmap-body">
+                        <h3>انتشار واقعی؛ مثل خود بایتی</h3>
+                        <p>پروژه‌ات را روی GitHub Pages منتشر کن؛ همین سایتی که می‌بینی، بدون بک‌اند و با همین روش منتشر شده است.</p>
+                        <div class="roadmap-links">
+                            <a href="videos.html#path=devops">ویدیوهای دواپس <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="300">
+                    <span class="roadmap-no">۷</span>
+                    <div class="roadmap-body">
+                        <h3>پروژهٔ پایانی: خط لولهٔ کامل</h3>
+                        <p>برای یک مخزن واقعی CI راه بینداز و خروجی سبز را به‌عنوان تسک هفتگی در پنل تحویل بده.</p>
+                        <div class="roadmap-links">
+                            <a href="../auth/auth.html">ورود به پنل و تحویل پروژه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="page-sec" id="articles" style="--path:var(--path-devops)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">articles</span>
+                    <h2>مقاله‌های این مسیر</h2>
+                    <p>هر مقاله یک پروندهٔ مستقل است؛ روی عنوان بزن تا متن کامل باز شود.</p>
+                </div>
+            </div>
+            <div class="article-list">
+                <a class="article-row" href="articles/devops/git-team.html" data-reveal data-delay="0">
+                    <span class="article-no">۰۱</span>
+                    <span class="article-main">
+                        <h3>Git تیمی بدون ترس: برنچ، ری‌بیس و پیام کامیت</h3>
+                        <p>یک گردش کار روزانهٔ ساده، قانون پیام کامیت و سه ابزار نجات که هر عضوی باید بلد باشد.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۷ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۱۸ مهر ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/devops/testing-pyramid.html" data-reveal data-delay="70">
+                    <span class="article-no">۰۳</span>
+                    <span class="article-main">
+                        <h3>هرم تست و اولین تست شما</h3>
+                        <p>چرا تست واحد زیاد، تست یکپارچه متوسط و تست سرتاسر کم؟ و چگونه اولین تست معنادار را همین امروز بنویسی.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۶ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۲ آبان ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/devops/ci-cd.html" data-reveal data-delay="140">
+                    <span class="article-no">۰۴</span>
+                    <span class="article-main">
+                        <h3>CI/CD با GitHub Actions: از پوش تا استقرار</h3>
+                        <p>یک خط لولهٔ حداقلی که هر پوش را لینت و تست می‌کند و شاخهٔ main را خودکار مستقر می‌کند؛ با اصل شکست سریع.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۸ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۹ آبان ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="videos" style="--path:var(--path-devops)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">video archive</span>
+                    <h2>ویدیوهای مسیر ابزار و دواپس</h2>
+                    <p>یک ویدیوی نمونه این‌جا می‌بینی؛ آرشیو کامل همهٔ مسیرها یک‌جا است.</p>
+                </div>
+                <a class="sec-link" href="videos.html#path=devops">آرشیو کامل ویدیوها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+            </div>
+            <a class="video-feature" href="videos.html#path=devops" data-reveal>
+                <div class="poster live">
+                    <img class="poster-img" src="https://static.cdn.asset.aparat.com/avt/62833676-1109-l__5739.jpg?width=900&amp;quality=90&amp;secret=V73Iwy2veb9qaR8X68M_Fw" alt="" loading="lazy">
+                    <span class="poster-tag">ویدیوی نمونهٔ مسیر · آپارات</span>
+                    <span class="poster-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                    <span class="poster-time">۸:۶۳</span>
+                </div>
+                <div class="video-feature-body">
+                    <span class="eyebrow">sample lesson · aparat</span>
+                    <h3>آموزش داکر ( Docker ) صفر تا صد + 14 درس رايگان و مدرک</h3>
+                    <p>بهترین دوره آموزش داکر ( Docker ) حرفه ای به همراه 14 فیلم آموزش داکر رایگان با تدریس مهندس حامد فروردین طبق آخرین سرفصل ها و استانداردهای بین المللی تهیه ، تدوین و تدریس شده است. </p>
+                    <p>با کلیک روی این کارت، آرشیو ویدیوهای آپارات فقط با ویدیوهای مسیر ابزار و دواپس باز می‌شود.</p>
+                    <span class="btn btn-ink">تماشای ویدیوهای این مسیر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-sec" id="templates" style="--path:var(--path-devops)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">ready-made code</span>
+                    <h2>کدهای آماده و پرکاربرد</h2>
+                    <p>هر قالب پیش‌نمایش دارد و صفحهٔ اجرای مستقل خودش را؛ کد قابل اجرا، همان‌جا تست می‌شود.</p>
+                </div>
+            </div>
+            <div class="tpl-grid">
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>ci-workflow.yml</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-num">name</span>: ci</div><div><em>02</em>&nbsp;</div><div><em>03</em><span class="tk-kw">on</span>:</div><div><em>04</em><span class="tk-num">  push</span>:</div><div><em>05</em><span class="tk-num">    branches</span>: [main]</div><div><em>06</em><span class="tk-num">  pull_request</span>:</div><div><em>07</em>&nbsp;</div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> server-side</span><span>yaml · UTF-8</span></div>
+                        </div>
+                        
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>ورک‌فلو CI برای لینت و تست</h3>
+                        <p>فایل آمادهٔ GitHub Actions با کش npm، ترتیب شکست سریع و job استقرار محافظت‌شده برای main.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">yaml</span>
+                            <span class="tpl-tag server">اجرای سمت سرور</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/devops/ci-workflow.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>کد + خروجی سرور</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>dockerfile.Dockerfile</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-com"># مرحلهٔ بیلد: همهٔ وابستگی‌ها و کامپایل</span></div><div><em>02</em><span class="tk-kw">FROM</span> node:<span class="tk-var">20</span>-alpine AS build</div><div><em>03</em><span class="tk-kw">WORKDIR</span> /app</div><div><em>04</em><span class="tk-kw">COPY</span> package*.json ./</div><div><em>05</em><span class="tk-kw">RUN</span> npm ci</div><div><em>06</em><span class="tk-kw">COPY</span> . .</div><div><em>07</em><span class="tk-kw">RUN</span> npm run build</div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> server-side</span><span>docker · UTF-8</span></div>
+                        </div>
+                        
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>Dockerfile چندمرحله‌ای برای اپ Node</h3>
+                        <p>بیلد چندمرحله‌ای: ایمیج نهایی فقط خروجیِ اجرا را دارد؛ کش لایه‌ها، کاربر غیرroot و healthcheck.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">docker</span>
+                            <span class="tpl-tag server">اجرای سمت سرور</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/devops/dockerfile.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>کد + خروجی سرور</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../index.html" class="logo"><img class="logo-img" src="../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../tracks/backend.html">بک‌اند</a>
+                <a href="../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../index.html#about">دربارهٔ ما</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../assets/static/data-extra.js"></script>
+<script src="../assets/static/bytea.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرانت‌اند — مسیر یادگیری بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="description" content="از اولین دیو تا کامپوننت قابل تست؛ مسیری که با HTML و CSS ساخت‌یافته شروع می‌شود، با JavaScript مدرن جان می‌گیرد و با React و مدیریت وضعیت به پروژهٔ واقعی می‌رسد.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/tracks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-path="frontend">
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="path-hero" data-no="۰۱" style="--path:var(--path-frontend)">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../index.html#tracks">مسیرها</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>فرانت‌اند</b></nav>
+            <div class="path-head">
+                <span class="eyebrow">front-end path</span>
+                <h1>مسیر <span>فرانت‌اند</span></h1>
+                <p class="path-lead">از اولین دیو تا کامپوننت قابل تست؛ مسیری که با HTML و CSS ساخت‌یافته شروع می‌شود، با JavaScript مدرن جان می‌گیرد و با React و مدیریت وضعیت به پروژهٔ واقعی می‌رسد.</p>
+                <div class="meta-chips">
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <i>۲۴</i> ساعت آموزش</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg> <i>۴</i> مقاله</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg> <i>۷</i> ویدیوی آپارات</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg> <i>۳</i> قالب آماده</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="roadmap" style="--path:var(--path-frontend)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">learning roadmap</span>
+                    <h2>نقشهٔ راه این مسیر</h2>
+                    <p>به‌ترتیب شماره‌ها جلو برو؛ هر قدم به منبعِ همین مسیر وصل است. بعد از هر قدم، تسک هفتگی پنل را انجام بده.</p>
+                </div>
+            </div>
+            <ol class="roadmap-list">
+                <li class="roadmap-step" data-reveal data-delay="0">
+                    <span class="roadmap-no">۱</span>
+                    <div class="roadmap-body">
+                        <h3>HTML را یاد بگیر؛ اسکلت هر صفحه</h3>
+                        <p>تگ‌ها، ساختار سند، هدینگ‌ها، لینک، تصویر و فرم مقدماتی. هدف: بتوانی یک صفحهٔ سادهٔ معنایی بنویسی.</p>
+                        <div class="roadmap-links">
+                            <a href="videos.html#path=frontend">ویدیوهای فرانت‌اند <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="60">
+                    <span class="roadmap-no">۳</span>
+                    <div class="roadmap-body">
+                        <h3>CSS را تمام کن؛ ظاهر و چیدمان</h3>
+                        <p>رنگ، فونت، باکس‌مدل، Flexbox و Grid و ریسپانسیو. هدف: هر چیدمانی را بدون حدس‌زدن بسازی.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/frontend/grid-vs-flexbox.html">مقالهٔ Grid یا Flexbox <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="videos.html#path=frontend">ویدیوهای فرانت‌اند <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="120">
+                    <span class="roadmap-no">۴</span>
+                    <div class="roadmap-body">
+                        <h3>JavaScript را شروع کن؛ جانِ صفحه</h3>
+                        <p>متغیر، تابع، شرط، حلقه، DOM و رویدادها. هدف: صفحه‌ات به کلیک و تایپ کاربر جواب بدهد.</p>
+                        <div class="roadmap-links">
+                            <a href="videos.html#path=frontend">ویدیوهای فرانت‌اند <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="180">
+                    <span class="roadmap-no">۵</span>
+                    <div class="roadmap-body">
+                        <h3>یک فرم دسترس‌پذیر بساز</h3>
+                        <p>برچسب واقعی، اعلام خطا و مدیریت فوکوس؛ فرم اولین چیزی است که یک کاربر واقعی لمس می‌کند.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/frontend/accessible-forms.html">مقالهٔ فرم دسترس‌پذیر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="240">
+                    <span class="roadmap-no">۶</span>
+                    <div class="roadmap-body">
+                        <h3>با قالب‌های آماده تمرین کن</h3>
+                        <p>کد آماده را اجرا کن، بخوان و تغییر بده؛ بهترین راه تبدیل دانش به مهارت.</p>
+                        <div class="roadmap-links">
+                            <a href="templates/frontend/glass-login.html">قالب کارت ورود <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="templates/frontend/sticky-nav.html">قالب ناوبری چسبان <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="300">
+                    <span class="roadmap-no">۷</span>
+                    <div class="roadmap-body">
+                        <h3>React و پروژهٔ پایانی</h3>
+                        <p>کامپوننت و مدیریت وضعیت را یاد بگیر و یک سایت شخصی کامل بساز؛ پروژه را به‌عنوان تسک هفتگی در پنل تحویل بده.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/frontend/react-state.html">مقالهٔ وضعیت در React <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="../auth/auth.html">ورود به پنل و تحویل پروژه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="page-sec" id="articles" style="--path:var(--path-frontend)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">articles</span>
+                    <h2>مقاله‌های این مسیر</h2>
+                    <p>هر مقاله یک پروندهٔ مستقل است؛ روی عنوان بزن تا متن کامل باز شود.</p>
+                </div>
+            </div>
+            <div class="article-list">
+                <a class="article-row" href="articles/frontend/grid-vs-flexbox.html" data-reveal data-delay="0">
+                    <span class="article-no">۰۱</span>
+                    <span class="article-main">
+                        <h3>Grid یا Flexbox؛ کدام را کجا استفاده کنیم؟</h3>
+                        <p>تفاوت واقعی این دو، «سختی» نیست؛ بُعد چیدمان است. با یک قانون سرانگشتی و دو مثال، انتخاب را برای همیشه یاد بگیر.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۶ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۱۲ مهر ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/frontend/accessible-forms.html" data-reveal data-delay="70">
+                    <span class="article-no">۰۳</span>
+                    <span class="article-main">
+                        <h3>فرم دسترس‌پذیر: برچسب، خطا و فوکوس</h3>
+                        <p>سه چیزی که یک فرم را از «کارکننده» به «قابل استفاده برای همه» تبدیل می‌کند؛ با کد آماده و چک‌لیست کوتاه.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۷ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۲۸ مهر ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/frontend/react-state.html" data-reveal data-delay="140">
+                    <span class="article-no">۰۴</span>
+                    <span class="article-main">
+                        <h3>وضعیت در React: کجا نگه داریم و کجا نه؟</h3>
+                        <p>بیشتر باگ‌های وضعیت، باگِ «جای اشتباه» هستند؛ نه باگِ منطق. قانون مالکیت وضعیت را با مثال یاد بگیر.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۸ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۵ آبان ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="videos" style="--path:var(--path-frontend)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">video archive</span>
+                    <h2>ویدیوهای مسیر فرانت‌اند</h2>
+                    <p>یک ویدیوی نمونه این‌جا می‌بینی؛ آرشیو کامل همهٔ مسیرها یک‌جا است.</p>
+                </div>
+                <a class="sec-link" href="videos.html#path=frontend">آرشیو کامل ویدیوها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+            </div>
+            <a class="video-feature" href="videos.html#path=frontend" data-reveal>
+                <div class="poster live">
+                    <img class="poster-img" src="https://static.cdn.asset.aparat.com/avt/53033365-7177-l__8982.jpg?width=900&amp;quality=90&amp;secret=-pPYaFeBMZ1UfR--sz6fxg" alt="" loading="lazy">
+                    <span class="poster-tag">ویدیوی نمونهٔ مسیر · آپارات</span>
+                    <span class="poster-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                    <span class="poster-time">۵۸:۵۸</span>
+                </div>
+                <div class="video-feature-body">
+                    <span class="eyebrow">sample lesson · aparat</span>
+                    <h3>آموزش کامل HTML برای مبتدیان وب فرانت اند</h3>
+                    <p>سلام! شما برای شروع به یادگیری HTML، ابتدا نیاز دارید که با تعدادی مفاهیم پایه آشنا شوید. در اینجا به برخی از اصطلاحات و مفاهیم پایه HTML اشاره خواهیم کرد: ۱. تگ ها (Tags): HTML از</p>
+                    <p>با کلیک روی این کارت، آرشیو ویدیوهای آپارات فقط با ویدیوهای مسیر فرانت‌اند باز می‌شود.</p>
+                    <span class="btn btn-ink">تماشای ویدیوهای این مسیر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-sec" id="templates" style="--path:var(--path-frontend)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">ready-made code</span>
+                    <h2>کدهای آماده و پرکاربرد</h2>
+                    <p>هر قالب پیش‌نمایش دارد و صفحهٔ اجرای مستقل خودش را؛ کد قابل اجرا، همان‌جا تست می‌شود.</p>
+                </div>
+            </div>
+            <div class="tpl-grid">
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>glass-login.html</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-kw">&lt;!DOCTYPE html&gt;</span></div><div><em>02</em><span class="tk-tag">&lt;html</span> <span class="tk-attr">lang</span>=<span class="tk-str">&quot;fa&quot;</span> <span class="tk-attr">dir</span>=<span class="tk-str">&quot;rtl&quot;</span><span class="tk-tag">&gt;</span></div><div><em>03</em><span class="tk-tag">&lt;head</span><span class="tk-tag">&gt;</span></div><div><em>04</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">charset</span>=<span class="tk-str">&quot;UTF-8&quot;</span><span class="tk-tag">&gt;</span></div><div><em>05</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;viewport&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;width=device-width, initial-scale=1&quot;</span><span class="tk-tag">&gt;</span></div><div><em>06</em><span class="tk-tag">&lt;title</span><span class="tk-tag">&gt;</span>ورود | کارت شیشه‌ای<span class="tk-tag">&lt;/title</span><span class="tk-tag">&gt;</span></div><div><em>07</em><span class="tk-tag">&lt;style</span><span class="tk-tag">&gt;</span></div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> ready to run</span><span>html · UTF-8</span></div>
+                        </div>
+                        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;ورود | کارت شیشه‌ای&lt;/title&gt;
+&lt;style&gt;
+  :root {
+    --bg-a: #1d1a33; --bg-b: #43265c; --bg-c: #7a3b52;
+    --glass: rgba(255, 255, 255, .09);
+    --stroke: rgba(255, 255, 255, .22);
+    --text: #f4eefc; --muted: #bdb3d6; --accent: #ffb45c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh; display: grid; place-items: center;
+    font-family: Vazirmatn, system-ui, sans-serif; color: var(--text);
+    background: linear-gradient(135deg, var(--bg-a), var(--bg-b) 55%, var(--bg-c));
+  }
+  .card {
+    width: min(360px, calc(100% - 40px)); padding: 28px 26px;
+    border: 1px solid var(--stroke); border-radius: 20px;
+    background: var(--glass); backdrop-filter: blur(18px);
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .6);
+  }
+  h1 { font-size: 1.3rem; margin-bottom: 6px; }
+  p.sub { color: var(--muted); font-size: .8rem; margin-bottom: 20px; }
+  label { display: block; font-size: .75rem; margin: 12px 0 6px; color: var(--muted); }
+  .wrap { position: relative; }
+  input {
+    width: 100%; padding: 11px 12px; border-radius: 11px;
+    border: 1px solid var(--stroke); background: rgba(255, 255, 255, .07);
+    color: var(--text); font-family: inherit; font-size: .85rem; outline: none;
+  }
+  input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255, 180, 92, .25); }
+  .eye {
+    position: absolute; left: 8px; top: 50%; translate: 0 -50%;
+    border: 0; background: none; color: var(--muted); cursor: pointer; font-size: .9rem;
+  }
+  button.submit {
+    width: 100%; margin-top: 20px; padding: 12px; border: 0; border-radius: 11px;
+    background: linear-gradient(120deg, var(--accent), #ff8f6b);
+    color: #2b1608; font-family: inherit; font-weight: 700; font-size: .9rem; cursor: pointer;
+    transition: transform .15s;
+  }
+  button.submit:hover { transform: translateY(-2px); }
+  .msg { margin-top: 12px; font-size: .72rem; color: var(--accent); min-height: 1em; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form class=&quot;card&quot; id=&quot;f&quot;&gt;
+    &lt;h1&gt;خوش برگشتی ☕&lt;/h1&gt;
+    &lt;p class=&quot;sub&quot;&gt;برای ادامه وارد حسابت شو.&lt;/p&gt;
+    &lt;label for=&quot;u&quot;&gt;نام کاربری&lt;/label&gt;
+    &lt;input id=&quot;u&quot; autocomplete=&quot;username&quot; placeholder=&quot;مثلاً rayan&quot;&gt;
+    &lt;label for=&quot;p&quot;&gt;رمز عبور&lt;/label&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+      &lt;input id=&quot;p&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot; placeholder=&quot;••••••••&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;eye&quot; id=&quot;eye&quot; aria-label=&quot;نمایش رمز&quot; aria-pressed=&quot;false&quot;&gt;👁&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;submit&quot; type=&quot;submit&quot;&gt;ورود به پنل&lt;/button&gt;
+    &lt;p class=&quot;msg&quot; id=&quot;msg&quot; role=&quot;status&quot;&gt;&lt;/p&gt;
+  &lt;/form&gt;
+&lt;script&gt;
+  var eye = document.getElementById(&#039;eye&#039;);
+  var pass = document.getElementById(&#039;p&#039;);
+  eye.addEventListener(&#039;click&#039;, function () {
+    var show = pass.type === &#039;password&#039;;
+    pass.type = show ? &#039;text&#039; : &#039;password&#039;;
+    eye.textContent = show ? &#039;🙈&#039; : &#039;👁&#039;;
+    eye.setAttribute(&#039;aria-pressed&#039;, String(show));
+  });
+  document.getElementById(&#039;f&#039;).addEventListener(&#039;submit&#039;, function (e) {
+    e.preventDefault();
+    var u = document.getElementById(&#039;u&#039;).value.trim();
+    document.getElementById(&#039;msg&#039;).textContent = u
+      ? &#039;سلام &#039; + u + &#039;! این یک پیش‌نمایش است؛ احراز هویت واقعی سمت سرور انجام می‌شود.&#039;
+      : &#039;نام کاربری را وارد کن.&#039;;
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" tabindex="-1" aria-hidden="true" title="پیش‌نمایش کارت ورود شیشه‌ای" hidden></iframe>
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            <button type="button" data-tplview="live">پیش‌نمایش</button>
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>کارت ورود شیشه‌ای</h3>
+                        <p>فرم ورود با افکت شیشه‌ای، گرادیان چندتوقفی و نمایش/پنهان‌سازی رمز؛ کاملاً واکنش‌گرا و بدون وابستگی.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">html</span>
+                            <span class="tpl-tag run">قابل اجرا در مرورگر</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/frontend/glass-login.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>Run + Preview + Console</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>sticky-nav.html</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-kw">&lt;!DOCTYPE html&gt;</span></div><div><em>02</em><span class="tk-tag">&lt;html</span> <span class="tk-attr">lang</span>=<span class="tk-str">&quot;fa&quot;</span> <span class="tk-attr">dir</span>=<span class="tk-str">&quot;rtl&quot;</span><span class="tk-tag">&gt;</span></div><div><em>03</em><span class="tk-tag">&lt;head</span><span class="tk-tag">&gt;</span></div><div><em>04</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">charset</span>=<span class="tk-str">&quot;UTF-8&quot;</span><span class="tk-tag">&gt;</span></div><div><em>05</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;viewport&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;width=device-width, initial-scale=1&quot;</span><span class="tk-tag">&gt;</span></div><div><em>06</em><span class="tk-tag">&lt;title</span><span class="tk-tag">&gt;</span>ناوبری چسبان<span class="tk-tag">&lt;/title</span><span class="tk-tag">&gt;</span></div><div><em>07</em><span class="tk-tag">&lt;style</span><span class="tk-tag">&gt;</span></div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> ready to run</span><span>html · UTF-8</span></div>
+                        </div>
+                        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;ناوبری چسبان&lt;/title&gt;
+&lt;style&gt;
+  :root { --nav-h: 60px; --paper: #f6efe4; --ink: #181310; --amber: #c87b2c; --line: rgba(24,19,16,.14); }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Vazirmatn, system-ui, sans-serif; background: var(--paper); color: var(--ink); }
+  header {
+    position: sticky; top: 0; z-index: 10; height: var(--nav-h);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px; background: rgba(246, 239, 228, .85);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  }
+  .logo { font-weight: 800; }
+  nav { display: flex; gap: 4px; }
+  nav a {
+    padding: 8px 12px; border-radius: 9px; text-decoration: none;
+    color: var(--ink); font-size: .82rem; transition: background .2s;
+  }
+  nav a.active { background: var(--ink); color: var(--paper); }
+  .burger { display: none; border: 1px solid var(--line); background: none; border-radius: 9px; padding: 8px 10px; cursor: pointer; }
+  section { min-height: 70vh; padding: calc(var(--nav-h) + 30px) 24px 40px; scroll-margin-top: var(--nav-h); }
+  section:nth-child(odd) { background: rgba(200, 123, 44, .08); }
+  h2 { margin-bottom: 10px; }
+  p { color: #3d342c; max-width: 60ch; line-height: 1.9; font-size: .9rem; }
+  @media (max-width: 640px) {
+    .burger { display: block; }
+    nav {
+      position: absolute; top: var(--nav-h); right: 0; left: 0;
+      flex-direction: column; background: var(--paper);
+      border-bottom: 1px solid var(--line); padding: 10px 16px; display: none;
+    }
+    nav.open { display: flex; }
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+  &lt;span class=&quot;logo&quot;&gt;bytea ☕&lt;/span&gt;
+  &lt;nav id=&quot;nav&quot;&gt;
+    &lt;a href=&quot;#one&quot; class=&quot;active&quot;&gt;بخش یک&lt;/a&gt;
+    &lt;a href=&quot;#two&quot;&gt;بخش دو&lt;/a&gt;
+    &lt;a href=&quot;#three&quot;&gt;بخش سه&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;button class=&quot;burger&quot; id=&quot;burger&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav&quot;&gt;☰&lt;/button&gt;
+&lt;/header&gt;
+&lt;section id=&quot;one&quot;&gt;&lt;h2&gt;بخش یک&lt;/h2&gt;&lt;p&gt;اسکرول کن؛ لینک فعال در هدر خودش عوض می‌شود. این رفتار با IntersectionObserver ساخته شده و هزینهٔ محاسباتی ناچیزی دارد.&lt;/p&gt;&lt;/section&gt;
+&lt;section id=&quot;two&quot;&gt;&lt;h2&gt;بخش دو&lt;/h2&gt;&lt;p&gt;هدر چسبان است و پس‌زمینه‌اش بلور دارد؛ محتوا زیر آن رد می‌شود ولی خوانایی لینک‌ها حفظ می‌ماند.&lt;/p&gt;&lt;/section&gt;
+&lt;section id=&quot;three&quot;&gt;&lt;h2&gt;بخش سه&lt;/h2&gt;&lt;p&gt;در موبایل، منو جمع می‌شود و با همبرگر باز می‌شود؛ کلیک روی هر لینک، منو را می‌بندد.&lt;/p&gt;&lt;/section&gt;
+&lt;script&gt;
+  var burger = document.getElementById(&#039;burger&#039;);
+  var nav = document.getElementById(&#039;nav&#039;);
+  burger.addEventListener(&#039;click&#039;, function () {
+    var open = nav.classList.toggle(&#039;open&#039;);
+    burger.setAttribute(&#039;aria-expanded&#039;, String(open));
+  });
+  nav.addEventListener(&#039;click&#039;, function (e) {
+    if (e.target.tagName === &#039;A&#039;) { nav.classList.remove(&#039;open&#039;); burger.setAttribute(&#039;aria-expanded&#039;, &#039;false&#039;); }
+  });
+  var links = Array.prototype.slice.call(nav.querySelectorAll(&#039;a&#039;));
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        links.forEach(function (a) { a.classList.toggle(&#039;active&#039;, a.getAttribute(&#039;href&#039;) === &#039;#&#039; + en.target.id); });
+      }
+    });
+  }, { rootMargin: &#039;-40% 0px -55% 0px&#039; });
+  [&#039;one&#039;, &#039;two&#039;, &#039;three&#039;].forEach(function (id) { io.observe(document.getElementById(id)); });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" tabindex="-1" aria-hidden="true" title="پیش‌نمایش ناوبری چسبان با منوی موبایل" hidden></iframe>
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            <button type="button" data-tplview="live">پیش‌نمایش</button>
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>ناوبری چسبان با منوی موبایل</h3>
+                        <p>هدر چسبان با بلور پس‌زمینه، منوی همبرگری و هایلایت خودکار بخش فعال هنگام اسکرول؛ بدون هیچ کتابخانه‌ای.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">html</span>
+                            <span class="tpl-tag run">قابل اجرا در مرورگر</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/frontend/sticky-nav.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>Run + Preview + Console</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../index.html" class="logo"><img class="logo-img" src="../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../tracks/backend.html">بک‌اند</a>
+                <a href="../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../index.html#about">دربارهٔ ما</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../assets/static/data-extra.js"></script>
+<script src="../assets/static/bytea.js"></script>
+</body>
+</html>

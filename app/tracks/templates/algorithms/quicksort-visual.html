@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مرتب‌سازی سریع با نمایش زنده — قالب آمادهٔ بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../../../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../../../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../../../assets/favicon/site.webmanifest">
+<meta name="description" content="ویژوالایزر quicksort: میله‌ها، پیوت رنگی و سرعت قابل تنظیم؛ الگوریتم را با چشم ببین تا در headت اجرا شود.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../../assets/style/style.css">
+<link rel="stylesheet" href="../../../assets/style/tracks.css">
+<link rel="stylesheet" href="../../../assets/style/template.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../../../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../../../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../../../index.html#about">درباره</a>
+            <a href="../../../../index.html#tracks">مسیرها</a>
+            <a href="../../../../index.html#events">رویدادها</a>
+            <a href="../../../../index.html#mentors">منتورها</a>
+            <a href="../../../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../../../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../../../index.html#about">درباره</a>
+            <a href="../../../../index.html#tracks">مسیرها</a>
+            <a href="../../../../index.html#events">رویدادها</a>
+            <a href="../../../../index.html#mentors">منتورها</a>
+            <a href="../../../../index.html#faq">پرسش‌ها</a>
+            <a href="../../../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main style="--path:var(--path-algorithms)">
+    <div class="wrap">
+        <div class="tpl-hero">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../algorithms.html">الگوریتم و داده</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>قالب آماده</b></nav>
+            <h1>مرتب‌سازی سریع با نمایش زنده</h1>
+            <p class="desc">ویژوالایزر quicksort: میله‌ها، پیوت رنگی و سرعت قابل تنظیم؛ الگوریتم را با چشم ببین تا در headت اجرا شود.</p>
+            <div class="tpl-badges">
+                <span class="path-tag">الگوریتم و داده</span>
+                <span class="tpl-tag">html</span>
+                <span class="tpl-tag run">قابل اجرا و تست در مرورگر</span>
+            </div>
+        </div>
+        <div class="runner-grid">
+            <div class="runner-col">
+                <div class="editor-bar">
+                    <button type="button" id="run-btn" class="btn btn-amber"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg> اجرا و تست</button>
+                    <button type="button" id="reset-btn" class="bar-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg> بازنشانی</button>
+                    <button type="button" id="copy-btn" class="bar-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg> کپی کد</button>
+                    <span id="run-status" class="run-status"><i></i>آماده</span>
+                </div>
+                <div class="code-window runner-window">
+                    <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>quicksort-visual.html</span><span class="window-lock">⌘</span></div>
+                    <div class="code-surface">
+                        <div class="gutter" id="code-gutter" aria-hidden="true"></div>
+                        <pre id="code-highlight" class="dark-scroll" aria-hidden="true"></pre>
+                        <textarea id="code-area" class="dark-scroll" spellcheck="false" aria-label="ویرایشگر کد قالب"></textarea>
+                    </div>
+                    <div class="code-footer"><span><i class="status-dot"></i> ready to run</span><span>html · UTF-8</span></div>
+                </div>
+            </div>
+            
+            <div class="runner-col">
+                <div>
+                    <div class="pane-head"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg> پیش‌نمایش زنده</span><small>iframe sandbox</small></div>
+                    <iframe id="preview-frame" class="preview-frame" sandbox="allow-scripts" title="پیش‌نمایش اجرای کد"></iframe>
+                </div>
+                <div>
+                    <div class="pane-head"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9l3 3-3 3M13 15h4"/></svg> کنسول</span><small>خروجی console کد</small></div>
+                    <pre id="console-pane" class="console-pane dark-scroll"></pre>
+                </div>
+            </div>
+        </div>
+        <section class="tpl-notes">
+            <h2>این قالب چه می‌کند و چگونه استفاده کنیم؟</h2>
+            <p>ویژوالایزر quicksort: میله‌ها، پیوت رنگی و سرعت قابل تنظیم؛ الگوریتم را با چشم ببین تا در headت اجرا شود.</p>
+            <ul><li>دکمهٔ «اجرا» آرایهٔ تصادفی را مرتب می‌کند؛ «آرایهٔ جدید» داده را عوض می‌کند.</li><li>اسلایدر سرعت، تأخیر هر مقایسه را تنظیم می‌کند؛ برای کلاس درس سرعت کم را پیشنهاد می‌کنیم.</li><li>پیوت نارنجی و بازهٔ فعال روشن‌تر نمایش داده می‌شود.</li></ul>
+        </section>
+    </div>
+</main>
+<script type="application/json" id="tpl-data">{"slug":"quicksort-visual","lang":"html","runnable":true,"code":"\u003c!DOCTYPE html>\n\u003chtml lang=\"fa\" dir=\"rtl\">\n\u003chead>\n\u003cmeta charset=\"UTF-8\">\n\u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\u003ctitle>ویژوالایزر QuickSort\u003c/title>\n\u003cstyle>\n  :root { --bg: #141110; --bar: #5d5b6c; --pivot: #e7a44f; --done: #7e9b68; --text: #d9d2c7; }\n  * { box-sizing: border-box; margin: 0; }\n  body { background: var(--bg); color: var(--text); font-family: Vazirmatn, system-ui, sans-serif; padding: 20px; }\n  h1 { font-size: 1rem; margin-bottom: 4px; }\n  p { font-size: .72rem; color: #8e847a; margin-bottom: 14px; }\n  .stage { display: flex; align-items: flex-end; gap: 4px; height: 220px; padding: 10px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; }\n  .bar { flex: 1; background: var(--bar); border-radius: 4px 4px 0 0; transition: height .12s; }\n  .bar.pivot { background: var(--pivot); }\n  .bar.done { background: var(--done); }\n  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }\n  button { border: 0; border-radius: 9px; padding: 9px 16px; font-family: inherit; font-weight: 700; cursor: pointer; background: var(--pivot); color: #2b1608; }\n  button.ghost { background: none; color: var(--text); border: 1px solid rgba(255,255,255,.2); }\n  label { font-size: .72rem; display: flex; gap: 8px; align-items: center; }\n  input[type=range] { accent-color: var(--pivot); }\n  #log { margin-top: 10px; font-size: .7rem; color: #8e847a; min-height: 1.2em; }\n\u003c/style>\n\u003c/head>\n\u003cbody>\n\u003ch1>QuickSort زنده\u003c/h1>\n\u003cp>پیوت نارنجی است؛ میله‌های سبز در جای نهایی‌اند.\u003c/p>\n\u003cdiv class=\"stage\" id=\"stage\">\u003c/div>\n\u003cdiv class=\"controls\">\n  \u003cbutton id=\"run\">اجرا\u003c/button>\n  \u003cbutton id=\"shuffle\" class=\"ghost\">آرایهٔ جدید\u003c/button>\n  \u003clabel>سرعت \u003cinput id=\"speed\" type=\"range\" min=\"10\" max=\"240\" value=\"90\">\u003c/label>\n\u003c/div>\n\u003cp id=\"log\">\u003c/p>\n\u003cscript>\n  var stage = document.getElementById('stage');\n  var log = document.getElementById('log');\n  var arr = [], bars = [], busy = false;\n  function delay() { return new Promise(function (r) { setTimeout(r, 250 - Number(document.getElementById('speed').value)); }); }\n  function draw() {\n    stage.innerHTML = '';\n    bars = arr.map(function (v) {\n      var b = document.createElement('div');\n      b.className = 'bar'; b.style.height = (v * 2) + 'px';\n      stage.appendChild(b); return b;\n    });\n  }\n  function shuffle() {\n    if (busy) return;\n    arr = Array.from({ length: 28 }, function () { 10 + Math.floor(Math.random() * 95); });\n    draw(); log.textContent = 'آرایهٔ تازه آماده است.';\n  }\n  async function qs(lo, hi) {\n    if (lo >= hi) { if (bars[lo]) bars[lo].classList.add('done'); return; }\n    var p = arr[hi], i = lo;\n    bars[hi].classList.add('pivot');\n    log.textContent = 'پیوت = ' + p + ' در بازهٔ [' + lo + ',' + hi + ']';\n    for (var j = lo; j \u003c hi; j++) {\n      await delay();\n      if (arr[j] \u003c p) { var t = arr[i]; arr[i] = arr[j]; arr[j] = t; bars[i].style.height = arr[i] * 2 + 'px'; bars[j].style.height = arr[j] * 2 + 'px'; i++; }\n    }\n    var t2 = arr[i]; arr[i] = arr[hi]; arr[hi] = t2;\n    bars[i].style.height = arr[i] * 2 + 'px'; bars[hi].style.height = arr[hi] * 2 + 'px';\n    bars[hi].classList.remove('pivot'); bars[i].classList.add('done');\n    await qs(lo, i - 1); await qs(i + 1, hi);\n  }\n  document.getElementById('run').addEventListener('click', async function () {\n    if (busy) return; busy = true;\n    await qs(0, arr.length - 1);\n    bars.forEach(function (b) { b.classList.add('done'); });\n    log.textContent = 'مرتب شد؛ مقایسه‌ها را دیدی، حالا الگوریتم را می‌شناسی.';\n    busy = false;\n  });\n  document.getElementById('shuffle').addEventListener('click', shuffle);\n  shuffle();\n\u003c/script>\n\u003c/body>\n\u003c/html>","expected":[]}</script>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../../../index.html" class="logo"><img class="logo-img" src="../../../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../../../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../../../tracks/backend.html">بک‌اند</a>
+                <a href="../../../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../../../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../../../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../../../index.html#about">دربارهٔ ما</a>
+                <a href="../../../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../../../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../../../assets/static/data-extra.js"></script>
+<script src="../../../assets/static/bytea.js"></script>
+
+</body>
+</html>

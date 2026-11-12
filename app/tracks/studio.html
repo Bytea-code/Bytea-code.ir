@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>استودیو انتشار — بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="description" content="مقاله، قالب آماده و ویدیوی آپارات را بساز، زنده ببین و اجرا کن، و با یک کلیک منتشر کن — محلی، در پوشهٔ پروژه، یا مستقیم روی گیت‌هاب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/tracks.css">
+<link rel="stylesheet" href="../assets/style/template.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-studio="1" style="--path:var(--amber)">
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="videos.html">آرشیو ویدیو</a>
+            <a href="../auth/auth.html">داشبورد مدیریت</a>
+        </nav>
+        <div class="nav-cta">
+            <span class="studio-user-chip" id="studio-user">…</span>
+            <button type="button" id="studio-logout" class="bar-btn">خروج</button>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="videos.html">آرشیو ویدیو</a>
+            <a href="../auth/auth.html">داشبورد مدیریت</a>
+        </div>
+    </div>
+</header>
+
+<div class="gate-screen" id="gate">
+    <div class="gate-card">
+        <img class="logo-img gate-mark" src="../assets/img/logo.png" alt="">
+        <div class="gate-spin" aria-hidden="true"></div>
+        <p id="gate-text">در حال بررسی دسترسی مدیر…</p>
+        <a id="gate-link" class="btn btn-ghost" href="../auth/auth.html" hidden>بازگشت به صفحهٔ ورود</a>
+    </div>
+</div>
+
+<main hidden>
+    <section class="tpl-hero">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>استودیو انتشار</b></nav>
+            <span class="eyebrow">publish desk</span>
+            <h1>استودیو انتشار بایتی</h1>
+            <p class="desc">مقاله بنویس، قالب بساز و همان‌جا اجرا کن، ویدیوی آپارات را اضافه کن؛ پیش‌نمایش زندهٔ کامپوننت و صفحهٔ کامل را ببین. بعد با یک کلیک منتشر کن: روی همین دستگاه، مستقیم در پوشهٔ پروژه، یا روی گیت‌هاب — بدون کپی‌پیست. اگر جایی دسترسی نبود، کپی/دریافت فایل همیشه سر جایش است.</p>
+            <div class="tpl-badges" id="studio-stats"></div>
+        </div>
+    </section>
+
+    <div class="wrap">
+        <div class="studio-tabs" role="tablist" aria-label="نوع محتوا">
+            <button type="button" class="filter-chip active" data-mode="article" role="tab" aria-selected="true">مقاله</button>
+            <button type="button" class="filter-chip" data-mode="template" role="tab" aria-selected="false">قالب آماده</button>
+            <button type="button" class="filter-chip" data-mode="video" role="tab" aria-selected="false">ویدیوی آپارات</button>
+        </div>
+
+        <div class="studio-grid">
+            <form class="studio-form card" id="studio-form" novalidate>
+                <div class="s-row">
+                    <div class="s-field">
+                        <label for="f-path">مسیر</label>
+                        <select id="f-path">
+                            <option value="frontend">فرانت‌اند</option>
+                            <option value="backend">بک‌اند</option>
+                            <option value="algorithms">الگوریتم و داده</option>
+                            <option value="devops">ابزار و دواپس</option>
+                        </select>
+                    </div>
+                    <div class="s-field">
+                        <label for="f-id">شناسه (انگلیسی، اختیاری)</label>
+                        <input id="f-id" placeholder="خودکار ساخته می‌شود" dir="ltr">
+                    </div>
+                </div>
+                <div class="s-field">
+                    <label for="f-title">عنوان *</label>
+                    <input id="f-title" placeholder="مثلاً: مدیریت وضعیت در React بدون کتابخانه">
+                </div>
+
+                <fieldset class="s-group" data-group="article">
+                    <div class="s-row">
+                        <div class="s-field"><label for="f-author">نویسنده</label><input id="f-author" placeholder="نام تو"></div>
+                        <div class="s-field"><label for="f-minutes">دقیقه مطالعه</label><input id="f-minutes" value="۵"></div>
+                    </div>
+                    <div class="s-field"><label for="f-excerpt">خلاصه (زیر عنوان در فهرست)</label><input id="f-excerpt" placeholder="یک جملهٔ دعوت‌کننده"></div>
+                    <div class="s-field">
+                        <label for="f-body">بدنهٔ مقاله</label>
+                        <div class="md-tools" role="toolbar" aria-label="ابزار نشانه‌گذاری">
+                            <button type="button" class="bar-btn" data-md="h2">## بخش</button>
+                            <button type="button" class="bar-btn" data-md="list">- فهرست</button>
+                            <button type="button" class="bar-btn" data-md="tip">&gt; نکته</button>
+                            <button type="button" class="bar-btn" data-md="code">``` کد</button>
+                            <span class="md-count" id="body-count">۰ واژه · ~۱ دقیقه</span>
+                        </div>
+                        <textarea id="f-body" rows="10" placeholder="پاراگراف ساده بنویس..."></textarea>
+                        <small class="s-hint">خط خالی = پاراگراف جدید · <code>## عنوان</code> · <code>- مورد</code> · <code>&gt; نکته</code> · سه بک‌تیک + نام زبان = بلوک کد</small>
+                    </div>
+                </fieldset>
+
+                <fieldset class="s-group" data-group="template" hidden>
+                    <div class="s-field"><label for="f-desc">توضیح قالب</label><input id="f-desc" placeholder="این قالب چه می‌کند؟"></div>
+                    <div class="s-row">
+                        <div class="s-field">
+                            <label for="f-lang">زبان</label>
+                            <select id="f-lang">
+                                <option value="html">html</option>
+                                <option value="css">css</option>
+                                <option value="js">js</option>
+                                <option value="php">php</option>
+                                <option value="yaml">yaml</option>
+                                <option value="docker">docker</option>
+                            </select>
+                        </div>
+                        <div class="s-field s-check">
+                            <label for="f-runnable"><input type="checkbox" id="f-runnable" checked> در مرورگر قابل اجراست</label>
+                        </div>
+                    </div>
+                    <div class="s-field">
+                        <label for="f-code">کد کامل *</label>
+                        <div class="code-surface studio-code">
+                            <div class="gutter" id="s-gutter" aria-hidden="true"></div>
+                            <pre id="s-highlight" class="dark-scroll" aria-hidden="true"></pre>
+                            <textarea id="f-code" class="dark-scroll" dir="ltr" spellcheck="false" placeholder="یک فایل HTML مستقل کامل بچسبان..."></textarea>
+                        </div>
+                        <small class="s-hint">برای اجرای زنده، کد باید یک سند HTML کامل و مستقل باشد؛ همین‌جا با «اجرا در استودیو» تستش کن.</small>
+                    </div>
+                    <div class="s-field">
+                        <label for="f-expected">خروجی مورد انتظار سرور (هر خط یک لاگ؛ پیشوند اختیاری [ok] / [warn] / [error])</label>
+                        <textarea id="f-expected" rows="4" dir="ltr" spellcheck="false" placeholder="[ok] 201 Created"></textarea>
+                    </div>
+                    <div class="s-field">
+                        <label for="f-notes">یادداشت‌ها (هر خط یک مورد)</label>
+                        <textarea id="f-notes" rows="3" placeholder="یک فایل مستقل است؛ ذخیره کن و باز کن."></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="s-group" data-group="video" hidden>
+                    <div class="s-field">
+                        <label for="f-url">لینک ویدیوی آپارات *</label>
+                        <input id="f-url" dir="ltr" placeholder="https://www.aparat.com/v/xxxxx">
+                        <small class="s-hint">لینک صفحهٔ ویدیو یا خود شناسه؛ پخش با پخش‌کنندهٔ رسمی آپارات.</small>
+                    </div>
+                    <div class="s-row">
+                        <div class="s-field"><label for="f-owner">صاحب اثر / کانال</label><input id="f-owner" placeholder="نام کانال آپارات"></div>
+                        <div class="s-field"><label for="f-duration">مدت (ثانیه یا mm:ss)</label><input id="f-duration" dir="ltr" placeholder="12:34"></div>
+                    </div>
+                    <div class="s-field"><label for="f-desc-v">توضیح</label><input id="f-desc-v" placeholder="این ویدیو چه چیزی یاد می‌دهد؟"></div>
+                    <div class="s-field"><label for="f-poster">لینک پوستر (اختیاری)</label><input id="f-poster" dir="ltr" placeholder="خالی بماند = پوستر گرادیانی مسیر"></div>
+                </fieldset>
+
+                <div class="s-actions">
+                    <button type="button" id="add-btn" class="btn btn-amber">افزودن به صف</button>
+                    <button type="button" id="clear-form-btn" class="bar-btn">فرم خالی</button>
+                    <span id="form-status" class="run-status"><i></i>پیش‌نمایش زنده فعال است</span>
+                </div>
+            </form>
+
+            <aside class="studio-side">
+                <div class="pane-head">
+                    <span>پیش‌نمایش</span>
+                    <span class="preview-modes" role="group" aria-label="حالت پیش‌نمایش">
+                        <button type="button" class="bar-btn active" data-pv="component">کامپوننت</button>
+                        <button type="button" class="bar-btn" data-pv="full">صفحهٔ کامل</button>
+                        <button type="button" class="bar-btn" data-pv="run" id="pv-run-btn" hidden>اجرا</button>
+                    </span>
+                </div>
+                <div class="studio-preview" id="preview-box"></div>
+                <iframe id="preview-full" class="studio-full" title="پیش‌نمایش صفحهٔ کامل" hidden></iframe>
+                <div id="studio-run-area" hidden>
+                    <div class="editor-bar">
+                        <button type="button" id="s-run" class="btn btn-amber">اجرا در استودیو</button>
+                        <span id="s-run-status" class="run-status"><i></i>آماده</span>
+                    </div>
+                    <iframe id="studio-run" class="studio-embed" sandbox="allow-scripts" title="اجرای کد در استودیو"></iframe>
+                    <pre id="studio-console" class="console-pane dark-scroll"></pre>
+                </div>
+                <a id="preview-link" class="sec-link studio-preview-link" href="#" hidden>باز کردن در تب تازه</a>
+                <div class="studio-how card">
+                    <h3>سه راه انتشار، بدون کپی‌پیست اجباری</h3>
+                    <ol>
+                        <li><b>محلی:</b> صف روی همین دستگاه فوراً در سایت دیده می‌شود.</li>
+                        <li><b>پوشهٔ پروژه:</b> فایل داده مستقیم کنار پروژه نوشته می‌شود (مرورگرهای پشتیبانی‌کننده).</li>
+                        <li><b>گیت‌هاب:</b> با یک کلیک کامیت می‌شود؛ GitHub Pages خودش منتشر می‌کند.</li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
+
+        <section class="studio-items-sec">
+            <div class="sec-row">
+                <div><span class="eyebrow">your queue</span><h2>صف انتشار</h2></div>
+            </div>
+            <div class="q-toolbar">
+                <input id="q-search" class="video-search" type="search" placeholder="جستجو در صف…" aria-label="جستجو در صف">
+                <select id="q-kind" class="q-select" aria-label="نوع آیتم">
+                    <option value="all">همهٔ انواع</option>
+                    <option value="article">مقاله</option>
+                    <option value="template">قالب</option>
+                    <option value="video">ویدیو</option>
+                </select>
+                <span id="q-stats" class="video-count"></span>
+                <button type="button" id="export-queue" class="bar-btn">خروجی JSON صف</button>
+                <label class="bar-btn q-import">ورود JSON<input type="file" id="import-file" accept=".json,application/json" hidden></label>
+            </div>
+            <div id="items-list" class="studio-items"></div>
+        </section>
+
+        <section class="pub-panel card" id="publish-panel">
+            <div class="pub-head">
+                <div><span class="eyebrow">publish</span><h2>انتشار</h2></div>
+                <span id="pub-status" class="run-status"><i></i>آماده</span>
+            </div>
+            <div class="pub-targets">
+                <button type="button" id="pub-local" class="btn btn-amber">انتشار محلی</button>
+                <button type="button" id="pub-folder" class="bar-btn">نوشتن در پوشهٔ پروژه</button>
+                <button type="button" id="pub-github" class="btn btn-ink">انتشار روی گیت‌هاب</button>
+            </div>
+            <div class="gh-grid">
+                <div class="s-field"><label for="gh-owner">مالک مخزن</label><input id="gh-owner" dir="ltr" placeholder="username"></div>
+                <div class="s-field"><label for="gh-repo">نام مخزن</label><input id="gh-repo" dir="ltr" placeholder="bytea"></div>
+                <div class="s-field"><label for="gh-branch">شاخه</label><input id="gh-branch" dir="ltr" value="main"></div>
+                <div class="s-field"><label for="gh-dir">پیشوند مسیر (اختیاری)</label><input id="gh-dir" dir="ltr" placeholder="مثلاً docs"></div>
+                <div class="s-field gh-token"><label for="gh-token">کلید شخصی (اختیاری؛ فقط در مرورگر خودت)</label><input id="gh-token" type="password" dir="ltr" placeholder="خالی بماند = کلید مشترک ادمین‌ها"></div>
+                <div class="s-field s-check"><button type="button" id="gh-save" class="bar-btn">ذخیرهٔ تنظیمات</button></div>
+            </div>
+            <div class="gh-shared">
+                <span id="gh-shared-status" class="run-status"><i></i>کلید مشترک: در حال بررسی…</span>
+                <button type="button" id="gh-save-shared" class="bar-btn">ذخیرهٔ کلید مشترک برای همهٔ ادمین‌ها</button>
+            </div>
+            <p class="s-hint pub-note">کلید گیت‌هاب در هیچ فایلی از مخزن نیست (پس در Sources هم دیده نمی‌شود): در جدول <code>studio_secrets</code> سوپابیس با RLS می‌ماند و فقط نشستِ مدیر آن را می‌خواند. یک‌بار فایل <code>app/tools/supabase-studio-secrets.sql</code> را در SQL Editor اجرا کن، سپس کلید را همین‌جا ذخیره کن؛ از آن پس هر ادمین با یک کلیک منتشر می‌کند. توکن هرگز به جایی جز api.github.com و سوپابیسِ خودت فرستاده نمی‌شود.</p>
+            <div id="pub-history" class="pub-history"></div>
+            <div class="studio-actions">
+                <button type="button" id="copy-file" class="bar-btn">کپی فایل (پشتیبان)</button>
+                <button type="button" id="download-file" class="bar-btn">دریافت فایل</button>
+                <button type="button" id="reset-draft" class="bar-btn">بازگشت به نسخهٔ منتشرشده</button>
+            </div>
+            <textarea id="output-file" class="studio-output dark-scroll" readonly dir="ltr" spellcheck="false" aria-label="محتوای فایل انتشار"></textarea>
+        </section>
+    </div>
+</main>
+
+<footer hidden>
+    <div class="wrap">
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span>
+            <a class="mono foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+        </div>
+    </div>
+</footer>
+<script src="../assets/static/supabase.js"></script>
+<script src="../assets/static/data-extra.js"></script>
+<script src="../assets/static/bytea.js"></script>
+<script src="../assets/static/studio.js"></script>
+</body>
+</html>

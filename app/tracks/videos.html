@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>آرشیو ویدیوها — بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="description" content="همهٔ ویدیوهای آموزشی همهٔ مسیرهای بایتی در یک آرشیو واحد با فیلتر مسیر.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/tracks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="tpl-hero" style="--path:var(--amber)">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../index.html#tracks">مسیرها</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>آرشیو ویدیو</b></nav>
+            <span class="eyebrow">video archive</span>
+            <h1>آرشیو ویدیوهای بایتی</h1>
+            <p class="desc">همهٔ ضبط‌های همهٔ مسیرها در یک صفحه؛ با فیلتر مسیر یا جستجو، فقط چیزی را ببین که لازم داری. ورود از صفحهٔ هر مسیر، آرشیو را همان‌جا فیلترشده باز می‌کند.</p>
+        </div>
+    </section>
+    <div class="wrap">
+        <div class="filter-bar">
+            <div class="filter-chips" role="group" aria-label="فیلتر مسیر">
+                <button type="button" class="filter-chip active" data-path="all">همه</button>
+                <button type="button" class="filter-chip" data-path="frontend">فرانت‌اند</button>
+                <button type="button" class="filter-chip" data-path="backend">بک‌اند</button>
+                <button type="button" class="filter-chip" data-path="algorithms">الگوریتم و داده</button>
+                <button type="button" class="filter-chip" data-path="devops">ابزار و دواپس</button>
+            </div>
+            <input id="video-search" class="video-search" type="search" placeholder="جستجو در عنوان و توضیح…" aria-label="جستجوی ویدیو">
+            <p class="video-count" id="video-count" role="status"></p>
+        </div>
+        <div class="video-grid" id="video-grid"></div>
+    </div>
+</main>
+<dialog class="player-dialog" id="player-dialog" aria-labelledby="player-title">
+    <div class="player-stage"><iframe id="player-frame" title="پخش‌کنندهٔ آپارات" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+    <div class="player-body">
+        <div class="player-head">
+            <div>
+                <h2 id="player-title"></h2>
+                <div class="player-meta" id="player-meta"></div>
+            </div>
+            <button type="button" class="player-close" id="player-close" aria-label="بستن پخش‌کننده"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </div>
+        <p id="player-desc"></p>
+        <p class="player-source"><a id="player-link" class="btn btn-ghost" href="https://www.aparat.com" target="_blank" rel="noopener">مشاهدهٔ این ویدیو در آپارات</a></p>
+    </div>
+</dialog>
+<script src="../assets/static/data-catalog.js"></script>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../index.html" class="logo"><img class="logo-img" src="../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../tracks/backend.html">بک‌اند</a>
+                <a href="../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../index.html#about">دربارهٔ ما</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../assets/static/data-extra.js"></script>
+<script src="../assets/static/bytea.js"></script>
+</body>
+</html>

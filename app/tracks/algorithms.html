@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الگوریتم و داده — مسیر یادگیری بایتی</title>
+<meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="description" content="فکر کردن قبل از تایپ کردن؛ ساختمان داده‌های پرکاربرد، تحلیل پیچیدگی و تمرین‌های حل مسئلهٔ گروهی. مسیری که به تو «چرا»ی هر راه‌حل را یاد می‌دهد.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/tracks.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-path="algorithms">
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+<header class="nav">
+    <div class="wrap nav-in">
+        <a href="../../index.html" class="logo" aria-label="بایتی">
+            <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+            <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+        </nav>
+        <div class="nav-cta">
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+            <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="wrap">
+            <a href="../../index.html#about">درباره</a>
+            <a href="../../index.html#tracks">مسیرها</a>
+            <a href="../../index.html#events">رویدادها</a>
+            <a href="../../index.html#mentors">منتورها</a>
+            <a href="../../index.html#faq">پرسش‌ها</a>
+            <a href="../auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="path-hero" data-no="۰۳" style="--path:var(--path-algorithms)">
+        <div class="wrap">
+            <nav class="crumb" aria-label="مسیر صفحه"><a href="../../index.html">خانه</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><a href="../../index.html#tracks">مسیرها</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><b>الگوریتم و داده</b></nav>
+            <div class="path-head">
+                <span class="eyebrow">algorithms path</span>
+                <h1>مسیر <span>الگوریتم و داده</span></h1>
+                <p class="path-lead">فکر کردن قبل از تایپ کردن؛ ساختمان داده‌های پرکاربرد، تحلیل پیچیدگی و تمرین‌های حل مسئلهٔ گروهی. مسیری که به تو «چرا»ی هر راه‌حل را یاد می‌دهد.</p>
+                <div class="meta-chips">
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <i>۲۰</i> ساعت آموزش</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg> <i>۴</i> مقاله</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg> <i>۶</i> ویدیوی آپارات</span>
+                    <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg> <i>۳</i> قالب آماده</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="roadmap" style="--path:var(--path-algorithms)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">learning roadmap</span>
+                    <h2>نقشهٔ راه این مسیر</h2>
+                    <p>به‌ترتیب شماره‌ها جلو برو؛ هر قدم به منبعِ همین مسیر وصل است. بعد از هر قدم، تسک هفتگی پنل را انجام بده.</p>
+                </div>
+            </div>
+            <ol class="roadmap-list">
+                <li class="roadmap-step" data-reveal data-delay="0">
+                    <span class="roadmap-no">۱</span>
+                    <div class="roadmap-body">
+                        <h3>پیچیدگی زمانی؛ قبل از تایپ فکر کن</h3>
+                        <p>O(1) تا O(n²) را با چشم ببین؛ بفهم چرا حلقهٔ تودرتو روی دادهٔ بزرگ دشمن است.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/algorithms/big-o.html">مقالهٔ پیچیدگی زمانی <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="videos.html#path=algorithms">ویدیوهای الگوریتم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="60">
+                    <span class="roadmap-no">۳</span>
+                    <div class="roadmap-body">
+                        <h3>هش‌مپ؛ معاوضهٔ حافظه با زمان</h3>
+                        <p>Map و object، جستجوی O(1) و تله‌های برخورد؛ مسئلهٔ two-sum را از O(n²) به O(n) برسان.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/algorithms/hashmap.html">مقالهٔ هش‌مپ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="120">
+                    <span class="roadmap-no">۴</span>
+                    <div class="roadmap-body">
+                        <h3>بازگشتی فکر کردن</h3>
+                        <p>حالت پایه، قدم کوچک‌تر و ترکیب؛ سه سؤالی که قبل از نوشتن هر تابع بازگشتی باید جواب بدهی.</p>
+                        <div class="roadmap-links">
+                            <a href="articles/algorithms/recursion.html">مقالهٔ بازگشت <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="180">
+                    <span class="roadmap-no">۵</span>
+                    <div class="roadmap-body">
+                        <h3>الگوریتم را زنده ببین</h3>
+                        <p>quicksort و جستجوی دودویی را قدم‌به‌قدم اجرا کن تا اجرای الگوریتم در headت جا بیفتد.</p>
+                        <div class="roadmap-links">
+                            <a href="templates/algorithms/quicksort-visual.html">ویژوالایزر QuickSort <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <a href="templates/algorithms/binary-search.html">جستجوی دودویی <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="240">
+                    <span class="roadmap-no">۶</span>
+                    <div class="roadmap-body">
+                        <h3>تمرین گروهی حل مسئله</h3>
+                        <p>در جلسات گروهی، مسئله را بلند فکر کن و راه‌حل دیگران را نقد کن؛ سریع‌ترین راه رشد.</p>
+                        <div class="roadmap-links">
+                            <a href="videos.html#path=algorithms">ویدیوهای الگوریتم <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="roadmap-step" data-reveal data-delay="300">
+                    <span class="roadmap-no">۷</span>
+                    <div class="roadmap-body">
+                        <h3>چالش هفتگی پنل</h3>
+                        <p>هر هفته یک چالش جدید در پنل ابلاغ می‌شود؛ حل کن، تحویل بده و بازخورد منتور را بگیر.</p>
+                        <div class="roadmap-links">
+                            <a href="../auth/auth.html">ورود به پنل <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="page-sec" id="articles" style="--path:var(--path-algorithms)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">articles</span>
+                    <h2>مقاله‌های این مسیر</h2>
+                    <p>هر مقاله یک پروندهٔ مستقل است؛ روی عنوان بزن تا متن کامل باز شود.</p>
+                </div>
+            </div>
+            <div class="article-list">
+                <a class="article-row" href="articles/algorithms/big-o.html" data-reveal data-delay="0">
+                    <span class="article-no">۰۱</span>
+                    <span class="article-main">
+                        <h3>پیچیدگی زمانی را با چشم ببین: O(n) در برابر O(n²)</h3>
+                        <p>پیچیدگی، ریاضی ترسناک نیست؛ توصیفِ «با بزرگ شدن ورودی چه بلایی سر زمان می‌آید» است. با نمودار و مثال.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۶ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۱۵ مهر ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/algorithms/hashmap.html" data-reveal data-delay="70">
+                    <span class="article-no">۰۳</span>
+                    <span class="article-main">
+                        <h3>هش‌مپ؛ سریع‌ترین دوست شما و تله‌هایش</h3>
+                        <p>چرا جستجو در Map متوسط O(1) است، چه وقت بدترین حالت می‌شود و کجاها نباید از هش‌مپ استفاده کنی.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۷ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۳۰ مهر ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+                <a class="article-row" href="articles/algorithms/recursion.html" data-reveal data-delay="140">
+                    <span class="article-no">۰۴</span>
+                    <span class="article-main">
+                        <h3>بازگشتی فکر کردن: سه سؤال قبل از نوشتن تابع</h3>
+                        <p>بازگشت، «تابعی که خودش را صدا می‌زند» نیست؛ یک قرارداد است: حالت پایه، قدم کوچک‌تر و اعتماد به فراخوانی.</p>
+                        <span class="article-meta">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ۸ دقیقه مطالعه</span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> ۷ آبان ۱۴۰۵</span>
+                        </span>
+                    </span>
+                    <span class="article-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-sec" id="videos" style="--path:var(--path-algorithms)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">video archive</span>
+                    <h2>ویدیوهای مسیر الگوریتم و داده</h2>
+                    <p>یک ویدیوی نمونه این‌جا می‌بینی؛ آرشیو کامل همهٔ مسیرها یک‌جا است.</p>
+                </div>
+                <a class="sec-link" href="videos.html#path=algorithms">آرشیو کامل ویدیوها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+            </div>
+            <a class="video-feature" href="videos.html#path=algorithms" data-reveal>
+                <div class="poster live">
+                    <img class="poster-img" src="https://static.cdn.asset.aparat.com/avt/5078060-9569-l__3600.jpg?width=900&amp;quality=90&amp;secret=yTVfnUkKQFc1icNCyuDHnA" alt="" loading="lazy">
+                    <span class="poster-tag">ویدیوی نمونهٔ مسیر · آپارات</span>
+                    <span class="poster-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                    <span class="poster-time">۷۴:۰۰</span>
+                </div>
+                <div class="video-feature-body">
+                    <span class="eyebrow">sample lesson · aparat</span>
+                    <h3>ساختمان داده و طراحی الگوریتم - جلسه اول - مقدمات ریاضی</h3>
+                    <p>برای تهیه فیلم های آموزشی دروس ساختمان داده ، طراحی الگوریتم ، معماری کامپیوتر ، مدار منطقی یا دیجیتال ، ریاضیات گسسته یا ساختمان گسسته پیام دهید @yousefi_hadi 09121788534 @yousefi</p>
+                    <p>با کلیک روی این کارت، آرشیو ویدیوهای آپارات فقط با ویدیوهای مسیر الگوریتم و داده باز می‌شود.</p>
+                    <span class="btn btn-ink">تماشای ویدیوهای این مسیر <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-sec" id="templates" style="--path:var(--path-algorithms)">
+        <div class="wrap">
+            <div class="sec-row" data-reveal>
+                <div>
+                    <span class="eyebrow">ready-made code</span>
+                    <h2>کدهای آماده و پرکاربرد</h2>
+                    <p>هر قالب پیش‌نمایش دارد و صفحهٔ اجرای مستقل خودش را؛ کد قابل اجرا، همان‌جا تست می‌شود.</p>
+                </div>
+            </div>
+            <div class="tpl-grid">
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>quicksort-visual.html</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-kw">&lt;!DOCTYPE html&gt;</span></div><div><em>02</em><span class="tk-tag">&lt;html</span> <span class="tk-attr">lang</span>=<span class="tk-str">&quot;fa&quot;</span> <span class="tk-attr">dir</span>=<span class="tk-str">&quot;rtl&quot;</span><span class="tk-tag">&gt;</span></div><div><em>03</em><span class="tk-tag">&lt;head</span><span class="tk-tag">&gt;</span></div><div><em>04</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">charset</span>=<span class="tk-str">&quot;UTF-8&quot;</span><span class="tk-tag">&gt;</span></div><div><em>05</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;viewport&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;width=device-width, initial-scale=1&quot;</span><span class="tk-tag">&gt;</span></div><div><em>06</em><span class="tk-tag">&lt;title</span><span class="tk-tag">&gt;</span>ویژوالایزر QuickSort<span class="tk-tag">&lt;/title</span><span class="tk-tag">&gt;</span></div><div><em>07</em><span class="tk-tag">&lt;style</span><span class="tk-tag">&gt;</span></div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> ready to run</span><span>html · UTF-8</span></div>
+                        </div>
+                        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;ویژوالایزر QuickSort&lt;/title&gt;
+&lt;style&gt;
+  :root { --bg: #141110; --bar: #5d5b6c; --pivot: #e7a44f; --done: #7e9b68; --text: #d9d2c7; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--text); font-family: Vazirmatn, system-ui, sans-serif; padding: 20px; }
+  h1 { font-size: 1rem; margin-bottom: 4px; }
+  p { font-size: .72rem; color: #8e847a; margin-bottom: 14px; }
+  .stage { display: flex; align-items: flex-end; gap: 4px; height: 220px; padding: 10px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; }
+  .bar { flex: 1; background: var(--bar); border-radius: 4px 4px 0 0; transition: height .12s; }
+  .bar.pivot { background: var(--pivot); }
+  .bar.done { background: var(--done); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+  button { border: 0; border-radius: 9px; padding: 9px 16px; font-family: inherit; font-weight: 700; cursor: pointer; background: var(--pivot); color: #2b1608; }
+  button.ghost { background: none; color: var(--text); border: 1px solid rgba(255,255,255,.2); }
+  label { font-size: .72rem; display: flex; gap: 8px; align-items: center; }
+  input[type=range] { accent-color: var(--pivot); }
+  #log { margin-top: 10px; font-size: .7rem; color: #8e847a; min-height: 1.2em; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;QuickSort زنده&lt;/h1&gt;
+&lt;p&gt;پیوت نارنجی است؛ میله‌های سبز در جای نهایی‌اند.&lt;/p&gt;
+&lt;div class=&quot;stage&quot; id=&quot;stage&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;controls&quot;&gt;
+  &lt;button id=&quot;run&quot;&gt;اجرا&lt;/button&gt;
+  &lt;button id=&quot;shuffle&quot; class=&quot;ghost&quot;&gt;آرایهٔ جدید&lt;/button&gt;
+  &lt;label&gt;سرعت &lt;input id=&quot;speed&quot; type=&quot;range&quot; min=&quot;10&quot; max=&quot;240&quot; value=&quot;90&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;p id=&quot;log&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  var stage = document.getElementById(&#039;stage&#039;);
+  var log = document.getElementById(&#039;log&#039;);
+  var arr = [], bars = [], busy = false;
+  function delay() { return new Promise(function (r) { setTimeout(r, 250 - Number(document.getElementById(&#039;speed&#039;).value)); }); }
+  function draw() {
+    stage.innerHTML = &#039;&#039;;
+    bars = arr.map(function (v) {
+      var b = document.createElement(&#039;div&#039;);
+      b.className = &#039;bar&#039;; b.style.height = (v * 2) + &#039;px&#039;;
+      stage.appendChild(b); return b;
+    });
+  }
+  function shuffle() {
+    if (busy) return;
+    arr = Array.from({ length: 28 }, function () { 10 + Math.floor(Math.random() * 95); });
+    draw(); log.textContent = &#039;آرایهٔ تازه آماده است.&#039;;
+  }
+  async function qs(lo, hi) {
+    if (lo &gt;= hi) { if (bars[lo]) bars[lo].classList.add(&#039;done&#039;); return; }
+    var p = arr[hi], i = lo;
+    bars[hi].classList.add(&#039;pivot&#039;);
+    log.textContent = &#039;پیوت = &#039; + p + &#039; در بازهٔ [&#039; + lo + &#039;,&#039; + hi + &#039;]&#039;;
+    for (var j = lo; j &lt; hi; j++) {
+      await delay();
+      if (arr[j] &lt; p) { var t = arr[i]; arr[i] = arr[j]; arr[j] = t; bars[i].style.height = arr[i] * 2 + &#039;px&#039;; bars[j].style.height = arr[j] * 2 + &#039;px&#039;; i++; }
+    }
+    var t2 = arr[i]; arr[i] = arr[hi]; arr[hi] = t2;
+    bars[i].style.height = arr[i] * 2 + &#039;px&#039;; bars[hi].style.height = arr[hi] * 2 + &#039;px&#039;;
+    bars[hi].classList.remove(&#039;pivot&#039;); bars[i].classList.add(&#039;done&#039;);
+    await qs(lo, i - 1); await qs(i + 1, hi);
+  }
+  document.getElementById(&#039;run&#039;).addEventListener(&#039;click&#039;, async function () {
+    if (busy) return; busy = true;
+    await qs(0, arr.length - 1);
+    bars.forEach(function (b) { b.classList.add(&#039;done&#039;); });
+    log.textContent = &#039;مرتب شد؛ مقایسه‌ها را دیدی، حالا الگوریتم را می‌شناسی.&#039;;
+    busy = false;
+  });
+  document.getElementById(&#039;shuffle&#039;).addEventListener(&#039;click&#039;, shuffle);
+  shuffle();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" tabindex="-1" aria-hidden="true" title="پیش‌نمایش مرتب‌سازی سریع با نمایش زنده" hidden></iframe>
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            <button type="button" data-tplview="live">پیش‌نمایش</button>
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>مرتب‌سازی سریع با نمایش زنده</h3>
+                        <p>ویژوالایزر quicksort: میله‌ها، پیوت رنگی و سرعت قابل تنظیم؛ الگوریتم را با چشم ببین تا در headت اجرا شود.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">html</span>
+                            <span class="tpl-tag run">قابل اجرا در مرورگر</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/algorithms/quicksort-visual.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>Run + Preview + Console</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="tpl-card" data-reveal>
+                    <div class="tpl-preview tpl-preview-code">
+                        <div class="code-window tpl-window">
+                            <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>binary-search.html</span><span class="window-lock">⌘</span></div>
+                            <div class="code-content" dir="ltr"><div><em>01</em><span class="tk-kw">&lt;!DOCTYPE html&gt;</span></div><div><em>02</em><span class="tk-tag">&lt;html</span> <span class="tk-attr">lang</span>=<span class="tk-str">&quot;fa&quot;</span> <span class="tk-attr">dir</span>=<span class="tk-str">&quot;rtl&quot;</span><span class="tk-tag">&gt;</span></div><div><em>03</em><span class="tk-tag">&lt;head</span><span class="tk-tag">&gt;</span></div><div><em>04</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">charset</span>=<span class="tk-str">&quot;UTF-8&quot;</span><span class="tk-tag">&gt;</span></div><div><em>05</em><span class="tk-tag">&lt;meta</span> <span class="tk-attr">name</span>=<span class="tk-str">&quot;viewport&quot;</span> <span class="tk-attr">content</span>=<span class="tk-str">&quot;width=device-width, initial-scale=1&quot;</span><span class="tk-tag">&gt;</span></div><div><em>06</em><span class="tk-tag">&lt;title</span><span class="tk-tag">&gt;</span>جستجوی دودویی<span class="tk-tag">&lt;/title</span><span class="tk-tag">&gt;</span></div><div><em>07</em><span class="tk-tag">&lt;style</span><span class="tk-tag">&gt;</span></div></div>
+                            <div class="code-footer"><span><i class="status-dot"></i> ready to run</span><span>html · UTF-8</span></div>
+                        </div>
+                        <iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;جستجوی دودویی&lt;/title&gt;
+&lt;style&gt;
+  :root { --bg: #141110; --text: #d9d2c7; --dim: #5d5b6c; --amber: #e7a44f; --moss: #7e9b68; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--bg); color: var(--text); font-family: Vazirmatn, system-ui, sans-serif; padding: 20px; }
+  h1 { font-size: 1rem; margin-bottom: 12px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .chip { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 9px; border: 1px solid rgba(255,255,255,.14); font-family: monospace; font-size: .8rem; color: var(--dim); }
+  .chip.in { color: var(--text); border-color: rgba(231,164,79,.5); }
+  .chip.mid { background: var(--amber); color: #2b1608; border-color: var(--amber); font-weight: 700; }
+  .chip.hit { background: var(--moss); color: #10200c; border-color: var(--moss); }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  input { width: 80px; padding: 8px; border-radius: 9px; border: 1px solid rgba(255,255,255,.2); background: none; color: var(--text); font-family: monospace; }
+  button { border: 0; border-radius: 9px; padding: 9px 16px; background: var(--amber); color: #2b1608; font-family: inherit; font-weight: 700; cursor: pointer; }
+  button.ghost { background: none; color: var(--text); border: 1px solid rgba(255,255,255,.2); }
+  #log { margin-top: 12px; font-size: .72rem; color: #8e847a; min-height: 1.4em; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;جستجوی دودویی روی آرایهٔ مرتب&lt;/h1&gt;
+&lt;div class=&quot;row&quot; id=&quot;row&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;controls&quot;&gt;
+  &lt;label&gt;هدف: &lt;input id=&quot;target&quot; type=&quot;number&quot; value=&quot;37&quot;&gt;&lt;/label&gt;
+  &lt;button id=&quot;step&quot;&gt;قدم بعد&lt;/button&gt;
+  &lt;button id=&quot;reset&quot; class=&quot;ghost&quot;&gt;شروع دوباره&lt;/button&gt;
+&lt;/div&gt;
+&lt;p id=&quot;log&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+  var arr = [2, 5, 8, 12, 16, 23, 37, 41, 50, 58, 63, 71, 80, 84, 92];
+  var lo, hi, steps, found;
+  var row = document.getElementById(&#039;row&#039;);
+  var log = document.getElementById(&#039;log&#039;);
+  function draw(mid, hit) {
+    row.innerHTML = &#039;&#039;;
+    arr.forEach(function (v, i) {
+      var c = document.createElement(&#039;div&#039;);
+      c.className = &#039;chip&#039; + (i &gt;= lo &amp;&amp; i &lt;= hi ? &#039; in&#039; : &#039;&#039;) + (i === mid ? &#039; mid&#039; : &#039;&#039;) + (hit &amp;&amp; i === mid ? &#039; hit&#039; : &#039;&#039;);
+      c.textContent = v;
+      row.appendChild(c);
+    });
+  }
+  function reset() {
+    lo = 0; hi = arr.length - 1; steps = 0; found = false;
+    draw(-1, false);
+    log.textContent = &#039;بازهٔ اولیه: [0,&#039; + hi + &#039;] — هدف را وارد کن و قدم بزن.&#039;;
+  }
+  document.getElementById(&#039;step&#039;).addEventListener(&#039;click&#039;, function () {
+    if (found || lo &gt; hi) { log.textContent = &#039;جستجو تمام شده؛ شروع دوباره را بزن.&#039;; return; }
+    var target = Number(document.getElementById(&#039;target&#039;).value);
+    var mid = Math.floor((lo + hi) / 2);
+    steps++;
+    if (arr[mid] === target) { found = true; draw(mid, true); log.textContent = &#039;پیدا شد در ایندکس &#039; + mid + &#039; با &#039; + steps + &#039; قدم (log₂ 15 ≈ 4).&#039;; return; }
+    if (arr[mid] &lt; target) lo = mid + 1; else hi = mid - 1;
+    draw(mid, false);
+    log.textContent = &#039;قدم &#039; + steps + &#039;: mid=&#039; + mid + &#039; (&#039; + arr[mid] + &#039;) → بازهٔ جدید [&#039; + lo + &#039;,&#039; + hi + &#039;]&#039;;
+    if (lo &gt; hi) log.textContent += &#039; — بازه خالی شد؛ هدف موجود نیست.&#039;;
+  });
+  document.getElementById(&#039;reset&#039;).addEventListener(&#039;click&#039;, reset);
+  reset();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" tabindex="-1" aria-hidden="true" title="پیش‌نمایش جستجوی دودویی قدم‌به‌قدم" hidden></iframe>
+                        <div class="tpl-view-switch" role="group" aria-label="نمایش قالب">
+                            <button type="button" class="active" data-tplview="code">کد</button>
+                            <button type="button" data-tplview="live">پیش‌نمایش</button>
+                        </div>
+                    </div>
+                    <div class="tpl-body">
+                        <h3>جستجوی دودویی قدم‌به‌قدم</h3>
+                        <p>آرایهٔ مرتب، هدف دلخواه و نمایش زندهٔ lo/mid/hi؛ هر قدم نصف شدن بازه را روی چیپ‌ها می‌بینی.</p>
+                        <div class="tpl-tags">
+                            <span class="tpl-tag">html</span>
+                            <span class="tpl-tag run">قابل اجرا در مرورگر</span>
+                        </div>
+                        <div class="tpl-foot">
+                            <a href="templates/algorithms/binary-search.html">باز کردن و اجرا <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+                            <span>Run + Preview + Console</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrap">
+        <div class="foot-grid">
+            <div class="foot-brand">
+                <a href="../../index.html" class="logo"><img class="logo-img" src="../assets/img/logo.png" alt="بایتی"><span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span></a>
+                <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر می‌کنیم.</p>
+            </div>
+            <div class="foot-col">
+                <h4>مسیرها</h4>
+                <a href="../tracks/frontend.html">فرانت‌اند</a>
+                <a href="../tracks/backend.html">بک‌اند</a>
+                <a href="../tracks/algorithms.html">الگوریتم و داده</a>
+                <a href="../tracks/devops.html">ابزار و دواپس</a>
+            </div>
+            <div class="foot-col">
+                <h4>یادگیری</h4>
+                <a href="../tracks/videos.html">آرشیو ویدیوها</a>
+                <a href="../../index.html#tracks">نقشهٔ مسیرها</a>
+                <a href="../../index.html#faq">پرسش‌های متداول</a>
+            </div>
+            <div class="foot-col">
+                <h4>انجمن</h4>
+                <a href="../../index.html#about">دربارهٔ ما</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <span>© <span id="year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span>
+            <span class="mono">refactor the feature</span>
+        </div>
+    </div>
+</footer>
+<script src="../assets/static/data-extra.js"></script>
+<script src="../assets/static/bytea.js"></script>
+</body>
+</html>

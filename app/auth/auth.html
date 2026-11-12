@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="bytea-scroll">
+<head>
+<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ورود اعضا به پنل بایتی؛ ادامه مسیر یادگیری، پروژه‌ها و فعالیت‌های انجمن.">
+    <meta name="theme-color" content="#F6EFE4">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <title>ورود اعضا | بایتی</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/login-style.css">
+    <script src="../assets/static/supabase.js"></script>
+</head>
+<body class="auth-body">
+<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+    <div class="loader-card">
+        <div class="loader-steam"><i></i><i></i><i></i></div>
+        <img class="logo-img loader-mark" src="../assets/img/logo.png" alt="">
+        <div class="loader-word">bytea</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-note mono">brewing the page…</div>
+    </div>
+</div>
+<noscript><style>.bytea-loader{display:none}</style></noscript>
+
+    <header class="nav auth-nav">
+        <div class="wrap nav-in">
+            <a href="../../index.html" class="logo" aria-label="بایتی، صفحه اصلی">
+                <img class="logo-img" src="../assets/img/logo.png" alt="بایتی">
+                <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+            </a>
+            <nav class="nav-links" aria-label="ناوبری اصلی">
+                <a href="../../index.html#about">درباره</a>
+                <a href="../../index.html#tracks">مسیرها</a>
+                <a href="../../index.html#events">رویدادها</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a href="../../index.html#faq">پرسش‌ها</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="../../index.html" class="btn btn-ghost auth-back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    بازگشت به خانه
+                </a>
+                <button class="burger" type="button" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <a href="../../index.html#about">درباره</a>
+                <a href="../../index.html#tracks">مسیرها</a>
+                <a href="../../index.html#events">رویدادها</a>
+                <a href="../../index.html#mentors">منتورها</a>
+                <a href="../../index.html#faq">پرسش‌ها</a>
+                <a href="../../index.html" class="btn btn-ink">بازگشت به صفحه اصلی</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="auth-panel" class="auth-main">
+        <div class="wrap auth-grid">
+            <section class="auth-intro" aria-labelledby="auth-welcome-title">
+                <div class="pill"><i></i> فضای شخصی اعضای بایتی</div>
+                <span class="eyebrow">welcome back</span>
+                <h1 id="auth-welcome-title">به بایتی<br><span class="hl">خوش برگشتی.</span></h1>
+                <p class="auth-lead">به مسیر یادگیری، تسک‌ها و پروژه‌هایت برگرد. اینجا همان جایی است که کدِ بهتر، با هم نوشته می‌شود.</p>
+                <ul class="auth-benefits" aria-label="امکانات پنل اعضا">
+                    <li>
+                        <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16" /></svg></span>
+                        <span><b>ادامه مسیر یادگیری</b><small>تسک‌ها و فعالیت‌های هفتگی</small></span>
+                    </li>
+                    <li>
+                        <span class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 7 9 18l-5-5" /></svg></span>
+                        <span><b>پیگیری و دریافت بازخورد</b><small>وضعیت کارها و نظر منتورها</small></span>
+                    </li>
+                </ul>
+                <div class="auth-code-window" dir="ltr" aria-hidden="true">
+                    <div class="window-top">
+                        <div class="window-dots"><i></i><i></i><i></i></div><span>member.ts</span><span class="window-lock">●</span>
+                    </div>
+                    <div class="auth-code-content">
+                        <div><em>01</em><span class="kw">const</span> member = <span class="kw">await</span> bytea.<b>login</b>();</div>
+                        <div><em>02</em><span class="kw">if</span> (member.curious) {</div>
+                        <div><em>03</em>&nbsp;&nbsp;member.<b>keepBuilding</b>();</div>
+                        <div><em>04</em>}</div>
+                    </div>
+                </div>
+                <div class="auth-live-meta">
+                    <span id="live-clock" class="auth-clock"></span>
+                    <span class="auth-secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>اتصال امن اعضا</span>
+                </div>
+            </section>
+
+            <div class="auth-card-col">
+                <div class="alert-slot" id="slot-login"></div>
+                <section class="auth-card" aria-labelledby="login-title">
+                <div class="auth-card-head">
+                    <span class="auth-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" /></svg></span>
+                    <div>
+                        <span class="eyebrow">member access</span>
+                        <h2 id="login-title">ورود به حساب</h2>
+                        <p>برای ورود به پنل، اطلاعات حسابت را وارد کن.</p>
+                    </div>
+                </div>
+                <div class="login-guide" aria-label="راهنمای روش‌های ورود">
+                    <div class="login-method">
+                        <span class="login-method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8.7-8.7M15 7l2 2M18 4l2 2"/></svg></span>
+                        <span><b>ورود با رمز</b><small>اگر رمز عبورت را داری؛ سریع‌ترین راه همیشگی.</small></span>
+                    </div>
+                    <div class="login-method is-otp">
+                        <span class="login-method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                        <span><b>ورود با کد ایمیل</b><small>رمز لازم نیست؛ کد ۶ رقمی به ایمیل حسابت می‌آید.</small></span>
+                    </div>
+                </div>
+                <form id="login-form" class="auth-form" novalidate>
+                    <div class="auth-field">
+                        <label for="login-username">نام کاربری یا ایمیل</label>
+                        <div class="auth-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+                            <input type="text" id="login-username" name="username" placeholder="نام کاربری یا example@email.com" autocomplete="username" autocapitalize="none" spellcheck="false" dir="auto" required>
+                        </div>
+                    </div>
+                    <div class="auth-field">
+                        <label for="login-password">رمز عبور</label>
+                        <div class="auth-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+                            <input type="password" id="login-password" name="password" placeholder="رمز عبور خود را وارد کنید" autocomplete="current-password" dir="ltr" required>
+                            <button id="toggle-password" class="password-toggle" type="button" aria-label="نمایش رمز عبور" aria-pressed="false" title="نمایش رمز عبور">
+                                <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" /><circle cx="12" cy="12" r="2.5" /></svg>
+                                <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m3 3 18 18M10.6 6.1A10.8 10.8 0 0 1 12 6c6.5 0 10 6 10 6a18 18 0 0 1-2.1 2.8M6.2 6.2C3.4 8.1 2 12 2 12s3.5 6 10 6a10.7 10.7 0 0 0 4.1-.8M9.9 9.9a3 3 0 0 0 4.2 4.2" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="btn-login" class="btn btn-ink auth-submit" type="submit">
+                        <span>ورود به پنل</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    </button>
+                    <button type="button" id="btn-forgot" class="auth-forgot">رمز عبورت را فراموش کرده‌ای؟</button>
+                </form>
+                <div class="auth-divider"><span>یا ورود بدون رمز</span></div>
+                <button id="btn-send-otp" class="btn btn-ghost auth-otp-button" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                    ارسال کد یک‌بارمصرف به ایمیل
+                </button>
+                <p class="otp-note" id="otp-note">برای ورود بدون رمز، نام کاربری یا ایمیلت را بنویس و این دکمه را بزن. ارسال هر کد جدید <b>۱ دقیقه</b> زمان می‌برد؛ اگر ایمیل نرسید، پوشه اسپم را چک کن.</p>
+                <div id="otp-verify-section" class="otp-verify-section hidden">
+                    <div class="otp-help" id="otp-help">کد ۶ رقمی ارسال‌شده به <b id="otp-destination" dir="ltr"></b> را وارد کن.<small>اگر ایمیل را نمی‌بینی، پوشه اسپم را هم بررسی کن.</small></div>
+                    <label class="sr-only" for="otp-code-input">کد تأیید ۶ رقمی</label>
+                    <input type="text" id="otp-code-input" class="otp-code-input" placeholder="______" inputmode="numeric" autocomplete="one-time-code" maxlength="6" dir="ltr" aria-describedby="otp-help">
+                    <div class="otp-actions">
+                        <button id="btn-verify-otp" class="btn btn-amber" type="button">تأیید کد و ورود</button>
+                        <button id="btn-cancel-otp" class="auth-text-button" type="button">ویرایش ایمیل</button>
+                    </div>
+                    <div class="otp-resend">
+                        <span id="otp-cooldown" role="status"></span>
+                        <button id="btn-resend-otp" class="otp-resend-btn" type="button" disabled>ارسال مجدد کد</button>
+                    </div>
+                </div>
+                <div id="connection-status" class="auth-connection" role="status"><i></i><span>در حال آماده‌سازی سامانه ورود...</span></div>
+                <p class="auth-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /><path d="m9 12 2 2 4-4" /></svg>اطلاعات ورود شما فقط برای احراز هویت استفاده می‌شود.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <main id="main-dashboard" class="dashboard-shell hidden">
+        <div class="container">
+            <div class="alert-slot" id="slot-dashboard"></div>
+            <div class="card dashboard-head">
+                <div><span class="eyebrow" id="dashboard-eyebrow">member dashboard</span><span id="user-welcome">در حال بارگذاری...</span></div>
+                <div class="dashboard-actions">
+                    <a id="btn-studio" href="../tracks/studio.html" class="dashboard-studio hidden">استودیو انتشار</a>
+                    <button id="btn-logout" class="dashboard-logout" type="button">خروج از حساب</button>
+                </div>
+            </div>
+            <div id="member-tabs" class="tab-menu hidden">
+                <button class="tab-btn active" id="tab-member-urgent" type="button">داشبورد فوری / رد شده</button>
+                <button class="tab-btn" id="tab-member-current" type="button">تسک‌های جاری هفته</button>
+                <button class="tab-btn" id="tab-member-archive" type="button">بایگانی کارهای گذشته</button>
+                <button class="tab-btn" id="tab-member-profile" type="button">تغییر رمز عبور</button>
+            </div>
+            <div id="admin-tabs" class="tab-menu hidden">
+                <button class="tab-btn active" id="tab-admin-today" type="button">بررسی روز آخر</button>
+                <button class="tab-btn" id="tab-admin-future" type="button">تسک‌های آینده</button>
+                <button class="tab-btn" id="tab-admin-expired" type="button">اتمام مهلت / تمدید</button>
+                <button class="tab-btn" id="tab-admin-search" type="button">جستجوی اعضا</button>
+                <button class="tab-btn" id="tab-admin-manage" type="button">مدیریت اعضا و تسک‌ها</button>
+            </div>
+            <div class="alert-slot" id="slot-member-urgent"></div>
+            <div id="member-urgent-zone" class="zone card">
+                <h3>تسک‌های تمدیدی، رد شده و امروز شما</h3>
+                <p class="dashboard-hint">برای مشاهده جزئیات و انجام تسک، روی عنوان آن کلیک کنید.</p>
+                <div id="list-urgent"></div>
+            </div>
+            <div class="alert-slot" id="slot-member-current"></div>
+            <div id="member-current-zone" class="zone card hidden">
+                <h3>تسک‌های جاری این هفته</h3>
+                <p class="dashboard-hint">برای مشاهده جزئیات و انجام تسک، روی عنوان آن کلیک کنید.</p>
+                <div id="list-current"></div>
+            </div>
+            <div class="alert-slot" id="slot-member-archive"></div>
+            <div id="member-archive-zone" class="zone card hidden"><h3>بایگانی کارهای گذشته و نهایی‌شده</h3><div id="list-archive"></div></div>
+            <div class="alert-slot" id="slot-member-profile"></div>
+            <div id="member-profile-zone" class="zone card hidden">
+                <h3>تغییر رمز عبور حساب کاربری</h3>
+                <label for="member-new-pass">رمز عبور جدید</label>
+                <input type="password" id="member-new-pass" placeholder="حداقل ۶ کاراکتر" autocomplete="new-password">
+                <button id="btn-change-pass" class="dashboard-primary" type="button">به‌روزرسانی رمز عبور</button>
+            </div>
+            <div class="alert-slot" id="slot-admin-today"></div>
+            <div id="admin-today-zone" class="zone card hidden"><h3>کارهای انجام‌شده جهت بررسی</h3><div id="list-admin-today"></div></div>
+            <div class="alert-slot" id="slot-admin-future"></div>
+            <div id="admin-future-zone" class="zone card hidden"><h3>مدیریت تسک‌های آینده اعضا</h3><div id="list-admin-future"></div></div>
+            <div class="alert-slot" id="slot-admin-expired"></div>
+            <div id="admin-expired-zone" class="zone card hidden"><h3>تسک‌های سوخته و تمدید سریع</h3><div id="list-admin-expired"></div></div>
+            <div class="alert-slot" id="slot-admin-search"></div>
+            <div id="admin-search-zone" class="zone card hidden">
+                <h3>پرونده و گزارش‌گیری فعالیت اعضا</h3>
+                <label for="search-input">نام کاربری عضو</label>
+                <input type="text" id="search-input" placeholder="نام کاربر را دقیق وارد کنید...">
+                <div id="search-results"></div>
+            </div>
+            <div class="alert-slot" id="slot-admin-manage"></div>
+            <div id="admin-manage-zone" class="zone card hidden">
+                <div class="alert-slot" id="slot-create-user"></div>
+                <div class="dashboard-section">
+                    <h3>تعریف حساب کاربری جدید</h3>
+                    <div class="dashboard-form-grid">
+                        <input type="text" id="new-user-name" placeholder="نام کاربری جدید" aria-label="نام کاربری جدید">
+                        <input type="password" id="new-user-pass" placeholder="رمز عبور" aria-label="رمز عبور کاربر جدید" autocomplete="new-password">
+                        <input type="text" id="new-user-job" placeholder="عنوان شغلی / مسئولیت" aria-label="عنوان شغلی یا مسئولیت">
+                        <select id="new-user-role" aria-label="نقش کاربر"><option value="member">عضو عادی</option><option value="admin">مدیر سیستم</option></select>
+                    </div>
+                    <button id="btn-create-user" class="dashboard-primary" type="button">ثبت و ایجاد حساب</button>
+                </div>
+                <div class="alert-slot" id="slot-create-task"></div>
+                <div class="dashboard-section">
+                    <h3>تعریف و تخصیص تسک جدید</h3>
+                    <label for="select-task-user">انتخاب عضو انجمن</label>
+                    <select id="select-task-user"><option value="">در حال بارگذاری لیست اعضا...</option></select>
+                    <label for="single-task-title">عنوان تسک</label>
+                    <input type="text" id="single-task-title" placeholder="عنوان فعالیت ابلاغی را وارد کنید...">
+                    <label for="single-task-type">نوع تسک</label>
+                    <select id="single-task-type"><option value="ویدیو">ویدیو</option><option value="پادکست">پادکست</option><option value="پوستر">پوستر / اینفوگرافیک</option><option value="متن">متن</option></select>
+                    <label for="single-task-date">مهلت نهایی تحویل شمسی</label>
+                    <input type="text" id="single-task-date" placeholder="مثال: 1405/04/11" dir="ltr">
+                    <button id="btn-create-task" class="dashboard-primary" type="button">ابلاغ و ثبت تسک</button>
+                </div>
+                <div class="alert-slot" id="slot-members"></div>
+                <div class="dashboard-section">
+                    <h3>مدیریت رمز عبور و اطلاعات اعضا</h3>
+                    <div class="dashboard-table-wrap">
+                        <table class="user-manage-table">
+                            <thead><tr><th>نام کاربری</th><th>نقش</th><th>عنوان شغلی / مسئولیت</th><th>عملیات ادمین</th></tr></thead>
+                            <tbody id="admin-users-table-body"><tr><td colspan="4">در حال دریافت اطلاعات...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="auth-footer">
+        <div class="wrap">
+            <div class="foot-bottom"><span>© <span id="auth-year">۱۴۰۵</span> بایتی — ساخته‌شده با چای و کمی ریفکتور.<span class="foot-social" data-social data-base="../"></span></span><a class="mono foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a></div>
+        </div>
+    </footer>
+    <script src="../assets/static/bytea.js"></script>
+    <script src="../assets/static/auth.js"></script>
+</body>
+</html>
