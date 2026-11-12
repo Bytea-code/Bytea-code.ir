@@ -2,16 +2,16 @@
 <html lang="fa" dir="rtl" class="bytea-scroll">
 
 <head>
-<script>(function(){try{var t=localStorage.getItem('bytea-theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+    <script>(function () { try { var t = localStorage.getItem('bytea-theme'); if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', t); } catch (e) { } })();</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>بایتی — انجمن کدنویسی و آموزش</title>
-<meta name="theme-color" content="#F6EFE4">
-<link rel="icon" href="app/assets/favicon/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="app/assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="app/assets/favicon/favicon-16x16.png">
-<link rel="apple-touch-icon" href="app/assets/favicon/apple-touch-icon.png">
-<link rel="manifest" href="app/assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#F6EFE4">
+    <link rel="icon" href="app/assets/favicon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="app/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="app/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="app/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="app/assets/favicon/site.webmanifest">
     <meta name="description"
         content="بایتی (bytea) انجمن باز کدنویسی و آموزش برنامه‌نویسی. با هم می‌نویسیم، ریفکتور می‌کنیم و یاد می‌گیریم. refactor the feature">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,22 +23,29 @@
 </head>
 
 <body>
-<div class="bytea-loader" id="bytea-loader" aria-hidden="true">
-    <div class="loader-card">
-        <div class="loader-steam"><i></i><i></i><i></i></div>
-        <img class="logo-img loader-mark" src="app/assets/img/logo.png" alt="">
-        <div class="loader-word">bytea</div>
-        <div class="loader-bar"><i></i></div>
-        <div class="loader-note mono">brewing the page…</div>
+    <div class="bytea-loader" id="bytea-loader" aria-hidden="true">
+        <div class="loader-card">
+            <div class="loader-steam"><i></i><i></i><i></i></div>
+            <img class="logo-img loader-mark" src="app/assets/img/logo.png" alt="">
+            <div class="loader-word">bytea</div>
+            <div class="loader-bar"><i></i></div>
+            <div class="loader-note mono">brewing the page…</div>
+        </div>
     </div>
-</div>
-<noscript><style>.bytea-loader{display:none}</style></noscript>
+    <noscript>
+        <style>
+            .bytea-loader {
+                display: none
+            }
+        </style>
+    </noscript>
 
 
     <!-- ================= Top bar ================= -->
+
     <header class="nav">
         <div class="wrap nav-in">
-            <a href="#" class="logo" aria-label="بایتی">
+            <a href="/" class="logo" aria-label="بایتی">
                 <img class="logo-img" src="app/assets/img/logo.png" alt="بایتی">
                 <span class="logo-text">
                     <b>bytea</b>
@@ -55,7 +62,7 @@
             </nav>
 
             <div class="nav-cta">
-                <a href="app/auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+                <a href="https://login.bytea-code.ir/" class="btn btn-ink" data-auth-link>ورود اعضا</a>
                 <button class="burger" aria-label="منو" aria-expanded="false" aria-controls="mobileMenu">
                     <span></span><span></span><span></span>
                 </button>
@@ -69,10 +76,11 @@
                 <a href="#events">رویدادها</a>
                 <a href="#mentors">منتورها</a>
                 <a href="#faq">پرسش‌ها</a>
-                <a href="app/auth/auth.html" class="btn btn-ink" data-auth-link>ورود اعضا</a>
+                <a href="https://login.bytea-code.ir/" class="btn btn-ink" data-auth-link>ورود اعضا</a>
             </div>
         </div>
     </header>
+
 
     <!-- ================= Hero ================= -->
     <section class="hero">
@@ -216,11 +224,12 @@
                 </p>
             </div>
 
+
             <div class="tracks">
                 <article class="track" data-reveal data-delay="0">
                     <div class="track-top">
                         <div>
-                            <h3><a href="app/tracks/frontend.html">فرانت‌اند</a></h3>
+                            <h3><a href="https://frontend.bytea-code.ir">فرانت‌اند</a></h3>
                             <p style="font-size:.85rem;color:var(--muted);margin-top:.2rem">از اولین دیو تا کامپوننت
                                 قابل تست</p>
                         </div>
@@ -231,13 +240,16 @@
                         <li>JavaScript مدرن و ماژول‌ها</li>
                         <li>React و مدیریت وضعیت</li>
                     </ul>
-                    <div class="track-foot"><a href="app/tracks/frontend.html">ورود به مسیر ←</a><span>۲۴ ساعت</span></div>
+                    <div class="track-foot">
+                        <a href="https://frontend.bytea-code.ir">ورود به مسیر ←</a>
+                        <span>۲۴ ساعت</span>
+                    </div>
                 </article>
 
                 <article class="track" data-reveal data-delay="80">
                     <div class="track-top">
                         <div>
-                            <h3><a href="app/tracks/backend.html">بک‌اند</a></h3>
+                            <h3><a href="https://backend.bytea-code.ir">بک‌اند</a></h3>
                             <p style="font-size:.85rem;color:var(--muted);margin-top:.2rem">APIهایی که دوام می‌آورند</p>
                         </div>
                         <span class="track-no">۰۲</span>
@@ -247,13 +259,16 @@
                         <li>پایگاه‌داده و مدل‌سازی</li>
                         <li>احراز هویت و امنیت پایه</li>
                     </ul>
-                    <div class="track-foot"><a href="app/tracks/backend.html">ورود به مسیر ←</a><span>۳۰ ساعت</span></div>
+                    <div class="track-foot">
+                        <a href="https://backend.bytea-code.ir">ورود به مسیر ←</a>
+                        <span>۳۰ ساعت</span>
+                    </div>
                 </article>
 
                 <article class="track" data-reveal data-delay="0">
                     <div class="track-top">
                         <div>
-                            <h3><a href="app/tracks/algorithms.html">الگوریتم و داده</a></h3>
+                            <h3><a href="https://algorithms.bytea-code.ir">الگوریتم و داده</a></h3>
                             <p style="font-size:.85rem;color:var(--muted);margin-top:.2rem">فکر کردن قبل از تایپ کردن
                             </p>
                         </div>
@@ -264,13 +279,16 @@
                         <li>تحلیل پیچیدگی</li>
                         <li>تمرین‌های حل مسئلهٔ گروهی</li>
                     </ul>
-                    <div class="track-foot"><a href="app/tracks/algorithms.html">ورود به مسیر ←</a><span>۲۰ ساعت</span></div>
+                    <div class="track-foot">
+                        <a href="https://algorithms.bytea-code.ir">ورود به مسیر ←</a>
+                        <span>۲۰ ساعت</span>
+                    </div>
                 </article>
 
                 <article class="track" data-reveal data-delay="80">
                     <div class="track-top">
                         <div>
-                            <h3><a href="app/tracks/devops.html">ابزار و دواپس</a></h3>
+                            <h3><a href="https://devops.bytea-code.ir">ابزار و دواپس</a></h3>
                             <p style="font-size:.85rem;color:var(--muted);margin-top:.2rem">کدت را به دست کاربر برسان
                             </p>
                         </div>
@@ -281,23 +299,25 @@
                         <li>تست خودکار و کیفیت کد</li>
                         <li>CI/CD و داکر</li>
                     </ul>
-                    <div class="track-foot"><a href="app/tracks/devops.html">ورود به مسیر ←</a><span>۱۸ ساعت</span></div>
+                    <div class="track-foot">
+                        <a href="https://devops.bytea-code.ir">ورود به مسیر ←</a>
+                        <span>۱۸ ساعت</span>
+                    </div>
                 </article>
             </div>
-        </div>
-    </section>
 
-    <!-- ================= Events ================= -->
-    <section id="events">
-        <div class="wrap">
-            <div class="sec-head" data-reveal>
-                <span class="eyebrow">upcoming</span>
-                <h2>رویدادهای پیش‌رو</h2>
-                <p>همهٔ جلسات برای اعضای انجمن رایگان‌اند و ضبطشان در آرشیو می‌ماند.</p>
-            </div>
 
-            <div class="events">
-                <!-- Event cards kept for when the first events are announced; uncomment to bring them back.
+            <!-- ================= Events ================= -->
+            <section id="events">
+                <div class="wrap">
+                    <div class="sec-head" data-reveal>
+                        <span class="eyebrow">upcoming</span>
+                        <h2>رویدادهای پیش‌رو</h2>
+                        <p>همهٔ جلسات برای اعضای انجمن رایگان‌اند و ضبطشان در آرشیو می‌ماند.</p>
+                    </div>
+
+                    <div class="events">
+                        <!-- Event cards kept for when the first events are announced; uncomment to bring them back.
                 <article class="ev" data-reveal>
                     <div class="ev-date"><b>۱۸</b><span>آبان</span></div>
                     <div class="ev-body">
@@ -325,197 +345,220 @@
                     <span class="ev-tag">حضوری — تهران</span>
                 </article>
                 -->
-                <div class="events-empty" data-reveal>
-                    <p>فعلاً رویدادی نداریم؛ با عضویتت می‌تونیم سریع‌تر اولین رویداد رو برگزار کنیم.</p>
-                    <a class="btn btn-amber" href="#join">عضویت در انجمن</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Stats ================= -->
-    <section style="padding-top:0">
-        <div class="wrap">
-            <div class="stats" data-reveal>
-                <div class="stats-grid">
-                    <div class="stat"><b>482</b><span>عضو فعال</span></div>
-                    <div class="stat"><b>0</b><span>کارگاه برگزارشده</span></div>
-                    <div class="stat"><b>0</b><span>پروژهٔ متن‌باز</span></div>
-                    <div class="stat"><b>3</b><span>منتور داوطلب</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Mentors ================= -->
-    <section id="mentors" style="padding-top:0">
-        <div class="wrap">
-            <div class="sec-head" data-reveal>
-                <span class="eyebrow">the people</span>
-                <h2>منتورهای بایتی</h2>
-                <p>همه داوطلب‌اند و همه از همان مسیری آمده‌اند که تو الان در آن هستی.</p>
-            </div>
-
-            <div class="mentors">
-                <article class="mentor" data-reveal>
-                    <div class="avatar">س</div>
-                    <h3>سپهر ابراهیمی</h3>
-                    <p>مسئول فناوری - فرانت اند و html/css
-</p>
-                </article>
-                <article class="mentor" data-reveal data-delay="70">
-                    <div class="avatar">ن</div>
-                    <h3>محمد صدرا ابراهیمی</h3>
-                    <p>مسئول فناوری - تولید محتوا</p>
-                </article>
-                <article class="mentor" data-reveal data-delay="140">
-                    <div class="avatar">م</div>
-                    <h3>معراج عیدی</h3>
-                    <p>تولید محتوا - پایتون</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= FAQ ================= -->
-    <section id="faq" style="padding-top:0">
-        <div class="wrap">
-            <div class="sec-head" data-reveal>
-                <span class="eyebrow">faq</span>
-                <h2>سؤال‌های پرتکرار</h2>
-            </div>
-
-            <div class="faq">
-                <details data-reveal open>
-                    <summary>هیچ دانشی از کدنویسی ندارم؛ دقیقاً از کجا شروع کنم؟</summary>
-                    <p>قدم‌به‌قدم این مسیر را برو:</p>
-                    <ol class="faq-steps">
-                        <li>در <a href="#join">فرم عضویت</a> نام و آیدی شبکه‌ات (ترجیحاً شاد) را ثبت کن.</li>
-                        <li>منتورها با تو ارتباط می‌گیرند و پس از آن، حساب کاربری‌ات ساخته می‌شود.</li>
-                        <li>با نام کاربری و رمزی که منتور می‌دهد، از <a href="app/auth/auth.html">صفحهٔ ورود</a> وارد پنل شو.</li>
-                        <li>به <a href="app/tracks/frontend.html#roadmap">نقشهٔ راه مسیر فرانت‌اند</a> برو و قدم ۱ یعنی HTML را شروع کن.</li>
-                        <li>هر قدم را با ویدیوها، مقاله‌ها و قالب‌های آمادهٔ همان مسیر جلو ببر و تسک‌های هفتگی پنل را انجام بده.</li>
-                    </ol>
-                </details>
-
-                <details data-reveal>
-                    <summary>چه پیش‌نیازی لازم است؟</summary>
-                    <p>فقط آشنایی مقدماتی با کامپیوتر و کمی وقت. اگر تا حالا حتی یک خط کد ننوشته‌ای، مسیر «فرانت‌اند» از
-                        صفر شروع
-                        می‌شود. اگر تجربه داری، مستقیم به پروژه‌های متن‌باز بپیوند.</p>
-                </details>
-
-                <details data-reveal>
-                    <summary>حساب کاربری در سایت چطور ساخته می‌شود؟</summary>
-                    <p>شما درخواست عضویت می‌دهید، بعد منتورها با شما ارتباط برقرار می‌کنند و پس از آن برایتان اکانت
-                        ساخته می‌شود. نام کاربری و رمز عبور را منتور به شما می‌دهد و می‌توانید بعد از ورود، در تب
-                        «تغییر رمز عبور» رمز خود را عوض کنید.</p>
-                </details>
-
-                <details data-reveal>
-                    <summary>چگونه منتور شویم؟</summary>
-                    <p>در صورتی که علاقه و دانش شما در حد کافی باشد، با منتورها ارتباط برقرار خواهید کرد و در صورتی که
-                        آن‌ها صلاح بدانند، شما منتور خواهید شد.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= Join / CTA ================= -->
-    <section id="join" style="padding-top:0">
-        <div class="wrap">
-            <div class="cta" data-reveal>
-                <span class="eyebrow" style="text-align:center">join the club</span>
-                <h2>اولین قدم: یک خط کد</h2>
-                <p>نامت را بگذار و شبکه‌ات را انتخاب کن و ایدی را بنویس(ترجیحا شاد)؛ دعوت‌نامهٔ ورود به انجمن و راهنمای شروع مسیر را همان‌جا
-                    برایت می‌فرستیم.</p>
-
-                <div class="alert-slot" id="slot-join"></div>
-                <form class="join-form" id="joinForm" novalidate>
-                    <input type="hidden" name="access_key" value="b88779ab-ad0a-4b3c-b611-3042033b6495">
-                    <input class="join-name" id="join-name" name="name" type="text" placeholder="نامت..." aria-label="نام" autocomplete="name" required>
-                    <div class="join-row">
-                        <div class="join-net" id="join-net">
-                            <button type="button" class="join-net-btn" id="join-net-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="شبکه اجتماعی">
-                                <span id="join-net-label">شاد</span>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-                            </button>
-                            <ul class="join-net-menu" id="join-net-menu" role="listbox" aria-label="شبکه اجتماعی" hidden>
-                                <li role="option" data-value="telegram" aria-selected="true" tabindex="-1">تلگرام</li>
-                                <li role="option" data-value="shad" aria-selected="false" tabindex="-1">شاد</li>
-                                <li role="option" data-value="eitaa" aria-selected="false" tabindex="-1">ایتا</li>
-                            </ul>
-                            <input type="hidden" id="join-network" name="network" value="shad">
-                        </div>
-                        <div class="join-id">
-                            <span class="join-prefix" id="join-prefix" aria-hidden="true">shad.ir/</span>
-                            <input id="join-id" name="social_id" type="text" dir="ltr" placeholder="your-id" aria-label="آیدی شبکه" autocomplete="off" required>
+                        <div class="events-empty" data-reveal>
+                            <p>فعلاً رویدادی نداریم؛ با عضویتت می‌تونیم سریع‌تر اولین رویداد رو برگزار کنیم.</p>
+                            <a class="btn btn-amber" href="#join">عضویت در انجمن</a>
                         </div>
                     </div>
-                    <input type="hidden" id="join-link" name="link">
-                    <button type="submit" class="btn btn-amber" id="join-submit">عضویت</button>
-                </form>
-                <div class="join-success" id="join-success" hidden>
-                    <div class="js-head">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 5-5"/></svg>
-                        <b>ثبت شد!</b>
+                </div>
+            </section>
+
+            <!-- ================= Stats ================= -->
+            <section style="padding-top:0">
+                <div class="wrap">
+                    <div class="stats" data-reveal>
+                        <div class="stats-grid">
+                            <div class="stat"><b>482</b><span>عضو فعال</span></div>
+                            <div class="stat"><b>0</b><span>کارگاه برگزارشده</span></div>
+                            <div class="stat"><b>0</b><span>پروژهٔ متن‌باز</span></div>
+                            <div class="stat"><b>3</b><span>منتور داوطلب</span></div>
+                        </div>
                     </div>
-                    <p class="js-note">دعوت‌نامهٔ ورود و راهنمای شروع مسیر به‌زودی برایت می‌آید.</p>
-                    <div class="js-row"><span>نام</span><b id="js-name"></b></div>
-                    <div class="js-row"><span>شبکه</span><b id="js-net"></b></div>
-                    <div class="js-linkrow">
-                        <code id="js-link" dir="ltr"></code>
-                        <button type="button" class="bar-btn" id="js-copy">کپی لینک</button>
+                </div>
+            </section>
+
+            <!-- ================= Mentors ================= -->
+            <section id="mentors" style="padding-top:0">
+                <div class="wrap">
+                    <div class="sec-head" data-reveal>
+                        <span class="eyebrow">the people</span>
+                        <h2>منتورهای بایتی</h2>
+                        <p>همه داوطلب‌اند و همه از همان مسیری آمده‌اند که تو الان در آن هستی.</p>
                     </div>
-                    <button type="button" class="bar-btn js-again" id="js-again">ثبت‌نام جدید</button>
+
+                    <div class="mentors">
+                        <article class="mentor" data-reveal>
+                            <div class="avatar">س</div>
+                            <h3>سپهر ابراهیمی</h3>
+                            <p>مسئول فناوری - فرانت اند و html/css
+                            </p>
+                        </article>
+                        <article class="mentor" data-reveal data-delay="70">
+                            <div class="avatar">ن</div>
+                            <h3>محمد صدرا ابراهیمی</h3>
+                            <p>مسئول فناوری - تولید محتوا</p>
+                        </article>
+                        <article class="mentor" data-reveal data-delay="140">
+                            <div class="avatar">م</div>
+                            <h3>معراج عیدی</h3>
+                            <p>تولید محتوا - پایتون</p>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- ================= Footer ================= -->
-    <footer>
-        <div class="wrap">
-            <div class="foot-grid">
-                <div class="foot-brand">
-                    <a href="#" class="logo">
-                        <img class="logo-img" src="app/assets/img/logo.png" alt="بایتی">
-                        <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
-                    </a>
-                    <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم بهتر
-                        می‌کنیم.</p>
+            <!-- ================= FAQ ================= -->
+            <section id="faq" style="padding-top:0">
+                <div class="wrap">
+                    <div class="sec-head" data-reveal>
+                        <span class="eyebrow">faq</span>
+                        <h2>سؤال‌های پرتکرار</h2>
+                    </div>
+
+                    <div class="faq">
+                        <details data-reveal open>
+                            <summary>هیچ دانشی از کدنویسی ندارم؛ دقیقاً از کجا شروع کنم؟</summary>
+                            <p>قدم‌به‌قدم این مسیر را برو:</p>
+                            <ol class="faq-steps">
+                                <li>در <a href="#join">فرم عضویت</a> نام و آیدی شبکه‌ات (ترجیحاً شاد) را ثبت کن.</li>
+                                <li>منتورها با تو ارتباط می‌گیرند و پس از آن، حساب کاربری‌ات ساخته می‌شود.</li>
+                                <li>با نام کاربری و رمزی که منتور می‌دهد، از <a href="app/auth/auth.html">صفحهٔ ورود</a>
+                                    وارد پنل شو.</li>
+                                <li>به <a href="app/tracks/frontend.html#roadmap">نقشهٔ راه مسیر فرانت‌اند</a> برو و قدم
+                                    ۱ یعنی HTML را شروع کن.</li>
+                                <li>هر قدم را با ویدیوها، مقاله‌ها و قالب‌های آمادهٔ همان مسیر جلو ببر و تسک‌های هفتگی
+                                    پنل را انجام بده.</li>
+                            </ol>
+                        </details>
+
+                        <details data-reveal>
+                            <summary>چه پیش‌نیازی لازم است؟</summary>
+                            <p>فقط آشنایی مقدماتی با کامپیوتر و کمی وقت. اگر تا حالا حتی یک خط کد ننوشته‌ای، مسیر
+                                «فرانت‌اند» از
+                                صفر شروع
+                                می‌شود. اگر تجربه داری، مستقیم به پروژه‌های متن‌باز بپیوند.</p>
+                        </details>
+
+                        <details data-reveal>
+                            <summary>حساب کاربری در سایت چطور ساخته می‌شود؟</summary>
+                            <p>شما درخواست عضویت می‌دهید، بعد منتورها با شما ارتباط برقرار می‌کنند و پس از آن برایتان
+                                اکانت
+                                ساخته می‌شود. نام کاربری و رمز عبور را منتور به شما می‌دهد و می‌توانید بعد از ورود، در
+                                تب
+                                «تغییر رمز عبور» رمز خود را عوض کنید.</p>
+                        </details>
+
+                        <details data-reveal>
+                            <summary>چگونه منتور شویم؟</summary>
+                            <p>در صورتی که علاقه و دانش شما در حد کافی باشد، با منتورها ارتباط برقرار خواهید کرد و در
+                                صورتی که
+                                آن‌ها صلاح بدانند، شما منتور خواهید شد.</p>
+                        </details>
+                    </div>
                 </div>
+            </section>
 
-                <div class="foot-col">
-                    <h4>انجمن</h4>
-                    <a href="#about">دربارهٔ ما</a>
-                    <a href="#mentors">منتورها</a>
-                    <a href="#events">رویدادها</a>
+            <!-- ================= Join / CTA ================= -->
+            <section id="join" style="padding-top:0">
+                <div class="wrap">
+                    <div class="cta" data-reveal>
+                        <span class="eyebrow" style="text-align:center">join the club</span>
+                        <h2>اولین قدم: یک خط کد</h2>
+                        <p>نامت را بگذار و شبکه‌ات را انتخاب کن و ایدی را بنویس(ترجیحا شاد)؛ دعوت‌نامهٔ ورود به انجمن و
+                            راهنمای شروع مسیر را همان‌جا
+                            برایت می‌فرستیم.</p>
+
+                        <div class="alert-slot" id="slot-join"></div>
+                        <form class="join-form" id="joinForm" novalidate>
+                            <input type="hidden" name="access_key" value="b88779ab-ad0a-4b3c-b611-3042033b6495">
+                            <input class="join-name" id="join-name" name="name" type="text" placeholder="نامت..."
+                                aria-label="نام" autocomplete="name" required>
+                            <div class="join-row">
+                                <div class="join-net" id="join-net">
+                                    <button type="button" class="join-net-btn" id="join-net-btn" aria-haspopup="listbox"
+                                        aria-expanded="false" aria-label="شبکه اجتماعی">
+                                        <span id="join-net-label">شاد</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="m6 9 6 6 6-6" />
+                                        </svg>
+                                    </button>
+                                    <ul class="join-net-menu" id="join-net-menu" role="listbox"
+                                        aria-label="شبکه اجتماعی" hidden>
+                                        <li role="option" data-value="telegram" aria-selected="true" tabindex="-1">
+                                            تلگرام</li>
+                                        <li role="option" data-value="shad" aria-selected="false" tabindex="-1">شاد</li>
+                                        <li role="option" data-value="eitaa" aria-selected="false" tabindex="-1">ایتا
+                                        </li>
+                                    </ul>
+                                    <input type="hidden" id="join-network" name="network" value="shad">
+                                </div>
+                                <div class="join-id">
+                                    <span class="join-prefix" id="join-prefix" aria-hidden="true">shad.ir/</span>
+                                    <input id="join-id" name="social_id" type="text" dir="ltr" placeholder="your-id"
+                                        aria-label="آیدی شبکه" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <input type="hidden" id="join-link" name="link">
+                            <button type="submit" class="btn btn-amber" id="join-submit">عضویت</button>
+                        </form>
+                        <div class="join-success" id="join-success" hidden>
+                            <div class="js-head">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="m8.5 12.5 2.5 2.5 5-5" />
+                                </svg>
+                                <b>ثبت شد!</b>
+                            </div>
+                            <p class="js-note">دعوت‌نامهٔ ورود و راهنمای شروع مسیر به‌زودی برایت می‌آید.</p>
+                            <div class="js-row"><span>نام</span><b id="js-name"></b></div>
+                            <div class="js-row"><span>شبکه</span><b id="js-net"></b></div>
+                            <div class="js-linkrow">
+                                <code id="js-link" dir="ltr"></code>
+                                <button type="button" class="bar-btn" id="js-copy">کپی لینک</button>
+                            </div>
+                            <button type="button" class="bar-btn js-again" id="js-again">ثبت‌نام جدید</button>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="foot-col">
-                    <h4>یادگیری</h4>
-                    <a href="#tracks">مسیرها</a>
-                    <a href="app/tracks/videos.html">آرشیو ویدیوها</a>
-                    <a href="#faq">پرسش‌های متداول</a>
+            <!-- ================= Footer ================= -->
+            <footer>
+                <div class="wrap">
+                    <div class="foot-grid">
+                        <div class="foot-brand">
+                            <a href="#" class="logo">
+                                <img class="logo-img" src="app/assets/img/logo.png" alt="بایتی">
+                                <span class="logo-text"><b>bytea</b><small>انجمن کدنویسی</small></span>
+                            </a>
+                            <p>انجمن باز کدنویسی و آموزش برنامه‌نویسی. کد را با هم می‌نویسیم، با هم می‌خوانیم و با هم
+                                بهتر
+                                می‌کنیم.</p>
+                        </div>
+
+                        <div class="foot-col">
+                            <h4>انجمن</h4>
+                            <a href="#about">دربارهٔ ما</a>
+                            <a href="#mentors">منتورها</a>
+                            <a href="#events">رویدادها</a>
+                        </div>
+
+                        <div class="foot-col">
+                            <h4>یادگیری</h4>
+                            <a href="#tracks">مسیرها</a>
+                            <a href="app/tracks/videos.html">آرشیو ویدیوها</a>
+                            <a href="#faq">پرسش‌های متداول</a>
+                        </div>
+
+                        <div class="foot-col">
+                            <h4>ارتباط</h4>
+                            <a href="#join">عضویت</a>
+                            <a href="#join">همکاری</a>
+                            <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
+                        </div>
+                    </div>
+
+                    <div class="foot-bottom">
+                        <span>© <span id="year">۱۴۰۴</span> بایتی .<span class="foot-social" data-social
+                                data-base="app/"></span></span>
+                        <span class="mono">refactor the feature</span>
+                    </div>
                 </div>
+            </footer>
 
-                <div class="foot-col">
-                    <h4>ارتباط</h4>
-                    <a href="#join">عضویت</a>
-                    <a href="#join">همکاری</a>
-                    <a class="foot-mail" href="mailto:contact@bytea-code.ir">contact@bytea-code.ir</a>
-                </div>
-            </div>
-
-            <div class="foot-bottom">
-                <span>© <span id="year">۱۴۰۴</span> بایتی .<span class="foot-social" data-social data-base="app/"></span></span>
-                <span class="mono">refactor the feature</span>
-            </div>
-        </div>
-    </footer>
-
-    <script src="app/assets/static/bytea.js"></script>
+            <script src="app/assets/static/bytea.js"></script>
 </body>
 
 </html>
