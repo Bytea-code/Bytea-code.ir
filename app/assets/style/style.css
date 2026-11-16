@@ -1435,6 +1435,62 @@ details p {
 .faq-steps a { color: var(--amber-tag-text); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .faq-steps a:hover { color: var(--amber); }
 
+.faq-sub {
+    margin-top: .7rem;
+    padding: .8rem .9rem;
+    border: 1px dashed var(--amber-border-soft);
+    border-radius: 10px;
+    background: var(--amber-bg-soft);
+}
+.faq-sub-head {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--amber-tag-text);
+}
+.faq-sub-head::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex: none;
+}
+.faq-substeps {
+    counter-reset: sub;
+    list-style: none;
+    margin: .55rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+    font-size: .82rem;
+}
+.faq-substeps li {
+    position: relative;
+    padding-inline-start: 1.5rem;
+}
+.faq-substeps li::before {
+    counter-increment: sub;
+    content: counter(sub, persian);
+    position: absolute;
+    inset-inline-start: 0;
+    top: .25em;
+    width: 1.15rem;
+    height: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--amber-border-soft);
+    color: var(--amber-tag-text);
+    font-size: .66rem;
+    font-weight: 700;
+}
+
 /* --- CTA --- */
 .cta {
     background: linear-gradient(160deg, var(--card), var(--cta-bg-end));
