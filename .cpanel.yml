@@ -1,1 +1,5 @@
-
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/byteacod/public_html/
+    - /bin/cp -R index.html app assets $DEPLOYPATH
